@@ -4,25 +4,19 @@
     <meta charset="UTF-8">
     <title>비밀번호 찾기</title>
     <script defer src=""></script>
-    <link rel="stylesheet" href="./id-search.css">
+    <link rel="stylesheet" href="./ps-search.css">
 </head>
 <body>
     <div class="container">
-        <h2>비밀번호 찾기</h2>
+        <h1>비밀번호 찾기</h1>
         <hr>
         <form method="post" action="" id="login-form">
             <div class="inputContainer">
-                <input class="inputBox" type="text" name="userName" placeholder="이름을 입력해주세요" required>
-                <input class="inputBox" type="phone" name="phoneNumber" placeholder="휴대폰 번호를 입력해주세요" required>
-            </div>
-            <div class="searchContainer">
-                <span class="searchButton" id="id-search" onclick="idSearch()">아이디 찾기</span>
-                <span>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp</span>
-                <span class="searchButton" id="ps-search" onclick="psSearch()">비밀번호 찾기</span>
+                <input class="inputBox" type="text" name="userName" placeholder="아이디를 입력해주세요" required>
+                <input class="inputBox" type="phone" name="phoneNumber" placeholder="주민등록번호를 입력해주세요" required>
             </div>
             <div class="buttonContainer">
-                <button type="submit" class="button" id="login-button" onclick="login()">로그인</button>
-                <button class="button" id="signin-button" onclick="signup()">회원가입</button>
+                <button class="button" id="random-button" onclick="randomNum()">인증번호 받기</button>
             </div>
         </form>
     </div>

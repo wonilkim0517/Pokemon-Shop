@@ -25,12 +25,13 @@ html, body {
     font-size: 14px;
 }
 
-.container h2 {
+.container h1 {
     margin-bottom: 60px;
 }
 
-.container hr {
-    border: 1px solid #000;
+hr {
+    width: 100%;
+    border: 1px solid lightgray;
     margin-bottom: 30px;
 }
 
