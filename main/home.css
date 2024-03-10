@@ -1,0 +1,34 @@
+a {
+    text-decoration-line: none;
+    color: inherit;
+}
+
+.time_sale {
+    margin-top: 30px;
+    width: 100%;
+    height: 400px;
+    background-color: #9ec5fe;
+}
+
+.title {
+    margin-top: 70px;
+    margin-left: 27px;
+    font-size: 30px;
+}
+
+.products {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.products a {
+    margin-bottom: 40px;
+}
+
+.product {
+    width: 280px;
+    height: 320px;
+    margin: 24px;
+    border: 1px solid black;
+}

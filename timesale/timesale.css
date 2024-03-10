@@ -1,0 +1,29 @@
+a {
+    text-decoration-line: none;
+    color: inherit;
+}
+
+.products {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.products a {
+    margin-bottom: 40px;
+}
+
+.product {
+    width: 288px;
+    height: 320px;
+    margin: 24px;
+    border: 1px solid black;
+}
+
+.clock {
+    width: 60px;
+}
+
+.product_info {
+    text-align: center;
+}
