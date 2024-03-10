@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <script defer src="./signup-page.js"></script>
+    <link rel="stylesheet" href="./signup-page.css">
+</head>
+<body>
+    <div class="container">
+        <h2>회원가입</h2>
+        <div class="detail">*전체 필수입력사항</div>
+        <hr>
+        <div class="inputContainer">
+            <form method="post" action="" id="signup-form">
+                <span class="inputDetail">
+                    <div class="text">아이디</div>
+                    <input class="userInput" id="userId" name="userId" type="text" placeholder="아이디를 입력해주세요" required>
+                </span>
+                <span class="inputDetail">
+                    <div class="text">비밀번호</div>
+                    <input class="userInput" id="ps" name="userPassword" type="password" placeholder="비밀번호를 입력해주세요" required>
+                </span>
+                <span class="inputDetail">
+                    <div class="text">비밀번호 확인</div>
+                    <input class="userInput" id="ps-check" name="userPassword" type="password" placeholder="비밀번호를 다시 입력해주세요" required>
+                </span>
+                <span class="inputDetail">
+                    <div class="text">이름</div>
+                    <input class="userInput" id="userName" name="userName" type="text" placeholder="이름을 입력해주세요" required>
+                </span>
+                <span class="inputDetail">
+                    <div class="text">주소</div>
+    <!--                주소 api 구현은 나중에....-->
+                    <input class="userInput" id="address" name="address" type="text" placeholder="주소를 입력해주세요" required>
+                </span>
+                <span class="inputDetail">
+                    <div class="text">전화번호</div>
+                    <input class="userInput" id="phone" name="phoneNum" type="text" placeholder="전화번호를 입력해주세요" required>
+                </span>
+                <input type="submit" class="signupButton" value="가입하기" onclick="signup()">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>로그인</title>
+  <script defer src="./login-page.js"></script>
+  <link rel="stylesheet" href="./login-page.css">
+</head>
+<body>
+  <div class="container">
+    <h2>로그인</h2>
+    <hr>
+    <form method="post" action="" id="login-form">
+      <div class="inputContainer">
+        <input class="inputBox" type="text" id="inputId" name="userId" placeholder="아이디를 입력해주세요" required>
+        <input class="inputBox" type="password" id="inputPs" name="userPassword" placeholder="비밀번호를 입력해주세요" required>
+      </div>
+      <div class="searchContainer">
+        <span class="searchButton" id="id-search" onclick="idSearch()">아이디 찾기</span>
+        <span>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp</span>
+        <span class="searchButton" id="ps-search" onclick="psSearch()">비밀번호 찾기</span>
+      </div>
+      <div class="buttonContainer">
+        <button type="submit" class="button" id="login-button" onclick="login()">로그인</button>
+        <button class="button" id="signin-button" onclick="signup()">회원가입</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
