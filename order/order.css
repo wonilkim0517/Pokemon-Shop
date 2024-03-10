@@ -1,0 +1,88 @@
+
+.search input {
+    width: 550px;
+    height: 60px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 90px;
+}
+
+h3 {
+    margin-left: 145px;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left:auto;
+    margin-right:auto;
+    width: 1400px;
+    font-size: 20px;
+}
+
+th {
+    text-align: center;
+    border: 2px solid gray;
+    border-left: none;
+    border-right: none;
+    height: 50px;
+}
+
+td {
+    border: 2px none gray;
+    height: 60px;
+}
+
+.order_product td {
+    border-bottom: 2px solid gray;
+}
+
+button {
+    width: 250px;
+    height: 70px;
+    background-color: goldenrod;
+    border: none;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+
+.button {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.member_info td {
+    border-left: none;
+    border-top: 2px solid black;
+    text-align: left;
+}
+
+.delivery_info {
+    border-top: 2px solid black;
+}
+
+.money_info {
+    border-top: 2px solid black;
+}
+
+.payment_info {
+    border-top: 2px solid black;
+}
+
+.money_info {
+    border-top: 2px solid black;
+}
+
+.payment_info td {
+    height: 70px;
+}
+
+.member, .delivery, .money, .payment {
+    margin-top: 150px;
+}
+
