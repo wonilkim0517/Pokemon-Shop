@@ -51,12 +51,7 @@ let orderDetailData = [{
     "id": 1,
     "order_id": 1,
     "product_id": 101,
-    "quantity": 4
-}, {
-    "id": 2,
-    "order_id": 2,
-    "product_id": 102,
-    "quantity": 3
+    "orderDetail_quantity": 3
 }]
 
 let orderData = [{
@@ -69,9 +64,9 @@ let orderData = [{
 }]
 
 let cartData = [{
-    "id": 0,
-    "user_id": 0,
-    "product_id": 0,
-    "cart_quantity": 0,
-    "is_ordered": "0"
+    "id": 1,
+    "user_id": 2,
+    "product_id": 101,
+    "cart_quantity": 1,
+    "is_ordered": 0
 }]
