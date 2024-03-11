@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>아이디 찾기</title>
-    <script defer src=""></script>
+    <script src="../data/data.json.js"></script>
+    <script defer src="id-search.js"></script>
     <link rel="stylesheet" href="./id-search.css">
 </head>
 <body>
-    <div class="container">
-        <h1>아이디 찾기</h1>
-        <hr/>
-        <form method="post" action="" id="login-form">
-            <div class="inputContainer">
-                <input class="inputBox" type="text" name="userName" placeholder="이름을 입력해주세요" required>
-                <input class="inputBox" type="phone" name="phoneNumber" placeholder="휴대폰 번호를 입력해주세요" required>
-            </div>
-            <div class="buttonContainer">
-                <button class="button" id="random-button" onclick="randomNum()">인증번호 받기</button>
-            </div>
-        </form>
+<div class="container">
+    <h1>아이디 찾기</h1>
+    <hr/>
+    <div id="login-form">
+        <div class="inputContainer">
+            <input class="inputBox" type="text" id="userName" placeholder="이름을 입력해주세요" required>
+            <input class="inputBox" type="phone" id="phoneNumber" placeholder="휴대폰 번호를 입력해주세요" required>
+        </div>
+        <div class="buttonContainer">
+            <button class="button" id="random-button" onclick="id_search()">id 확인</button>
+        </div>
     </div>
+</div>
 </body>
 </html>
