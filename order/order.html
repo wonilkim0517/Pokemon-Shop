@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="order.css">
+    <script src="../data/data.json.js"></script>
+    <script src="order.js"></script>
 </head>
 <body>
 <div class="all">
@@ -23,17 +25,7 @@
                     <th style="width: 200px">수량</th>
                     <th>금액</th>
                 </tr>
-                <tr>
-                    <td style="padding-left: 10px">상품 1</td>    <!-- 상품 이름 입력 (사진 필수 X) -->
-                    <td style="text-align: center">- 개</td> <!-- 상품 수량 입력 -->
-                    <td style="text-align: center">- 원</td> <!-- 상품 가격 입력 -->
-                </tr>
-                <tr>
-                    <td style="padding-left: 10px">상품 2</td>    <!-- 상품 이름 입력 (사진 필수 X) -->
-                    <td style="text-align: center">- 개</td> <!-- 상품 수량 입력 -->
-                    <td style="text-align: center">- 원</td> <!-- 상품 가격 입력 -->
-                </tr>
-                <!-- 상품 추가 시 54 ~ 58행 반복 -->
+                <!-- 상품 추가 시 동적 생성 -->
             </table>
         </div>
     </div>
@@ -43,11 +35,11 @@
         <table class="member_info">
             <tr>
                 <td style="width: 50px; height: 80px; border-bottom: none; padding-left: 10px">받으시는 분</td>
-                <td style="width: 200px; border-bottom: none; padding-left: 10px">---</td>  <!-- 받는 사람 입름 입력 -->
+                <td style="width: 200px; border-bottom: none; padding-left: 10px" id="orderDetail_user_name"></td>  <!-- 받는 사람 입름 입력 -->
             </tr>
             <tr>
                 <td style="height: 80px; border-bottom: none; border-top: none; padding-left: 10px">전화번호</td>
-                <td style="border-bottom: none; border-top: none">010-XXXX-XXXX</td>    <!-- 전화번호 입력 -->
+                <td style="border-bottom: none; border-top: none" id="orderDetail_phone_num"></td>    <!-- 전화번호 입력 -->
             </tr>
         </table>
     </div>
@@ -57,7 +49,7 @@
         <table class="delivery_info">
             <tr>
                 <td style="width: 50px; height: 80px; border-bottom: none; padding-left: 10px">배송지</td>
-                <td style="width: 200px; border-bottom: none; padding-left: 10px">서울특별시 노원구 화랑로 815</td>  <!-- 배송지 입력 -->
+                <td style="width: 200px; border-bottom: none; padding-left: 10px" id="order_detail_address"></td>  <!-- 배송지 입력 -->
             </tr>
         </table>
     </div>
@@ -90,7 +82,7 @@
         <table class="money_info">
             <tr>
                 <td style="width: 50px; height: 80px; border-bottom: none; padding-left: 10px">최종 결제 금액</td>
-                <td style="width: 200px; border-bottom: none">- 원</td>  <!-- 최종 결제 금액 입력 -->
+                <td style="width: 200px; border-bottom: none" id="orderDetail_total_price"></td>  <!-- 최종 결제 금액 입력 -->
             </tr>
         </table>
     </div>

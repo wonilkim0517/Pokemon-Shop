@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>관리자 페이지</title>
+    <script src="../data/data.json.js"></script>
+    <script defer src="admin-page.js"></script>
+    <link rel="stylesheet" href="admin-page.css">
+</head>
+<body>
+<div class="container">
+    <h1>상품 관리</h1>
+    <div class="detail">*전체 필수입력사항</div>
+    <hr/>
+    <div class="inputContainer">
+        <div id="signup-form">
+                <span class="inputDetail">
+                    <div class="text">상품 이름</div>
+                    <input class="userInput" id="product_name" name="product_name" type="text" placeholder="상품 이름 입력" required>
+                </span>
+            <span class="inputDetail">
+                    <div class="text">재고</div>
+                    <input class="userInput" id="stock" name="stock" type="text" placeholder="재고 입력" required>
+                </span>
+            <span class="inputDetail">
+                    <div class="text">가격</div>
+                    <input class="userInput" id="price" name="price" type="text" placeholder="가격 입력" required>
+                </span>
+            <span class="inputDetail">
+                    <div class="text">상세 설명</div>
+                    <input class="userInput" id="content" name="content" type="text" placeholder="설명 입력" required>
+                </span>
+            <span class="inputDetail">
+                    <div class="text">이미지</div>
+                    <input class="userInput" id="image" name="image" type="image" placeholder="이미지 삽입">
+                </span>
+            <input type="submit" class="signupButton" value="상품 등록" onclick="goods_stock()">
+        </div>
+    </div>
+</div>
+</body>
+</html>

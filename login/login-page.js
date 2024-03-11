@@ -1,18 +1,66 @@
-document.getElementById("login-form").addEventListener("submit", function(event) {
-    // // 폼 제출을 막음
-    event.preventDefault();
+// document.getElementById("login-form").addEventListener("submit", function (event) {
+//     // 폼 제출을 막음
+//     event.preventDefault();
 
-    // 필수 입력 필드 검사
-    var id = document.getElementById("inputId").value;
-    var ps = document.getElementById("inputPs").value;
+// 필수 입력 필드 검사
 
-    // 사용자 이름, 이메일, 비밀번호 모두 입력되었는지 확인
-    if (id.trim() === '' || ps.trim() === '') {
-        alert("필수 입력 필드를 작성해주세요.");
-    } else {
-        window.location.href = "../main/index.html"
+let allUser = JSON.parse(localStorage.getItem(('allUser')));
+// allUser[1].name
+console.log(allUser);
+const login = () => {
+    let inputId = document.getElementById("inputId").value;
+    let inputPs = document.getElementById("inputPs").value;
+
+    let result = loginCheck(inputId, inputPs);
+
+    if (result !== null) {
+        // 로그인 성공
+        alert('로그인 성공!');
+        // 필요하면 다른 페이지로 리디렉션할 수 있습니다.
+        // 사용자 정보를 localStorage에 저장
+        localStorage.setItem('loggedInUser', JSON.stringify(result));
+        let loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+        if (loggedInUser) {
+            // 로그인한 사용자 정보를 이용하여 필요한 작업 수행
+            console.log(loggedInUser);
+        } else {
+            // 로그인 정보가 없는 경우, 로그인 페이지로 이동 또는 다른 작업 수행
+            console.log('로그인 정보 없음');
+        }
+        window.location.href = "../main/home.html";
     }
-});
+    else {
+        // 로그인 실패
+        alert('틀린 이메일 또는 비밀번호입니다.');
+    }
+}
+
+function loginCheck(email, password) {
+    // dummy_data.js의 userData 배열을 순회합니다.
+    for (let i = 0; i < allUser.length; i++) {
+        if (allUser[i].email === email && allUser[i].password === password) {
+            // 이메일과 비밀번호가 일치하는 경우 사용자 데이터를 반환합니다.
+            return allUser[i];
+        }
+    }
+    // 일치하는 사용자 데이터가 없는 경우 null을 반환합니다.
+    return null;
+}
+
+
+// // localStorage 에 로그인 데이터 들어갔는지 확인
+//     document.addEventListener('DOMContentLoaded', function () {
+//         // localStorage에서 사용자 정보 읽기
+//         let loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+//         if (loggedInUser) {
+//             // 로그인한 사용자 정보를 이용하여 필요한 작업 수행
+//             console.log('로그인한 사용자 정보:', loggedInUser);
+//         } else {
+//             // 로그인 정보가 없는 경우, 로그인 페이지로 이동 또는 다른 작업 수행
+//             console.log('로그인 정보 없음');
+//             // location.href = 'login_page.html';
+//         }
+//     });
 
 
 const idSearch = () => {
