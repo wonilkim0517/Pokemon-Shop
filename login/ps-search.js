@@ -1,3 +1,5 @@
+let allUser = JSON.parse(localStorage.getItem(('allUser')));
+
 const ps_search= () => {
     let inputId = document.getElementById("userId").value;
     let inputPN = document.getElementById("phoneNumber").value;
@@ -16,10 +18,10 @@ const ps_search= () => {
 }
 
 function checkFindPs(email, phoneNum) {
-    for (let i = 0; i < userData.length; i++) {
-        if (userData[i].email === email && userData[i].phone_num === phoneNum) {
+    for (let i = 0; i < allUser.length; i++) {
+        if (allUser[i].email === email && allUser[i].phone_num === phoneNum) {
             // email과 이름과 전화번호가 일치하는 경우 사용자 비밀번호를 반환합니다.
-            return userData[i].password;
+            return allUser[i].password;
         }
     }
     // 일치하는 사용자 데이터가 없는 경우 null을 반환합니다.

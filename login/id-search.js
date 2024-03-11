@@ -1,3 +1,5 @@
+let allUser = JSON.parse(localStorage.getItem(('allUser')));
+
 const id_search = () => {
     // window.location.href = "";
     // 인증번호 생성 기능
@@ -20,10 +22,10 @@ const id_search = () => {
 }
 
 function checkFindId(name, phoneNum) {
-    for (let i = 0; i < userData.length; i++) {
-        if (userData[i].user_name === name && userData[i].phone_num === phoneNum) {
+    for (let i = 0; i < allUser.length; i++) {
+        if (allUser[i].user_name === name && allUser[i].phone_num === phoneNum) {
             // 이름과 전화번호가 일치하는 경우 사용자 email을 반환합니다.
-            return userData[i].email;
+            return allUser[i].email;
         }
     }
     // 일치하는 사용자 데이터가 없는 경우 null을 반환합니다.
