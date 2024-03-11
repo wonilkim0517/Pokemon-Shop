@@ -5,6 +5,8 @@
     <title>장바구니</title>
     <link rel="stylesheet" href="./cart.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script defer src="../data/data.json.js"></script>
+    <script defer src="cart.js"></script>
 </head>
 <body>
     <div class="fullScreen">
@@ -22,12 +24,14 @@
             <div class="container">
                 <div class="leftContainer">
                     <hr>
-                    <div class="productBox">
-                        <!--여기에 상품 데이터 불러옴-->
-                        <div class="productBox-text">
-                            장바구니에 담긴 상품이 없습니다.
-                        </div>
-                    </div>
+                    <table class="productBox">
+                        <tr>
+                            <th style="width: 1000px">상품 정보</th>
+                            <th style="width: 200px">수량</th>
+                            <th>금액</th>
+                        </tr>
+                        <!-- 상품 추가 시 동적 생성 -->
+                    </table>
                     <hr class="hr1">
                 </div>
                 <div class="rightContainer">
@@ -43,11 +47,11 @@
                             <div class="resultBox">
                                 <span class="text">
                                     <div class="text" id="price">상품 금액</div>
-                                    <div class="price-text">0원</div>
+                                    <div class="price-text" id="cart_total_price"></div>
                                 </span>
                                 <span class="text">
                                     <div class="text" id="quantity">총 수량</div>
-                                    <div class="quantity-text">0개</div>
+                                    <div class="quantity-text" id="cart_total_amount"></div>
                                 </span>
                                 <button type="button" class="payButton" onclick="window.location.href='../order/order.html'">결제하기</button>
                             </div>

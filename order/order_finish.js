@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-    const loggedInUser = userData[2]; // 세 번째 사용자 정보를 사용하겠다고 가정
+    let loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
 
     // 사용자 정보 설정
     document.getElementById('order_finish_user_name').textContent = loggedInUser.user_name;
