@@ -1,3 +1,3 @@
 const pay = () => {
-    window.location.href = "order.html";
+    window.location.href = "../order/order.html";
 }
