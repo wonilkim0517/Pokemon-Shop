@@ -70,6 +70,10 @@ const logout = () => {
     window.localStorage.removeItem('loggedInUser');
 }
 
+const search = () => {
+    document.getElementById("contentFrame").setAttribute("src", "../search/search.html");
+}
+
 // 로그인 상태 업데이트 함수
 function updateLoginStatus() {
     const loggedInUser = localStorage.getItem('loggedInUser');
