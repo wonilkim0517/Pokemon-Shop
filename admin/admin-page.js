@@ -7,8 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const hasBeenSet2 = localStorage.getItem(keyToCheck2);
     // 키가 없다면 값을 설정하고 키를 마킹합니다.
     if (!hasBeenSet2) {
-        // 원하는 작업을 수행합니다.
-        // 여기서는 값 설정을 예시로 들었습니다.
+        // 키에 맞는 값을 localStorage에 넣습니다
         localStorage.setItem(keyToCheck2, valueToSet2);
 
         // 설정된 후의 추가 작업을 수행할 수 있습니다.
@@ -45,7 +44,7 @@ const goods_stock = () => {
         }
     }
 
-    // 이후 로직은 유효성 검사를 통과한 경우에만 실행됨
+    // 상품 json data 틀 작성 및 동적으로 추가하기 위한 구조 구성
     const newProduct = {
         "id": productData.length + 101,
         "product_name": product_name,

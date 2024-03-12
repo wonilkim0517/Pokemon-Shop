@@ -75,7 +75,7 @@ addNewProductToCart(newProduct3);
 console.log(cartData);
 console.log(orderDetailData)
 document.addEventListener("DOMContentLoaded", function () {
-    const loggedInUser = userData[2]; // 세 번째 사용자 정보를 사용하겠다고 가정
+    let loggedInUser = JSON.parse(localStorage.getItem('loggedInUser')); // 세 번째 사용자 정보를 사용하겠다고 가정
     userAddress=loggedInUser.address;
     userId=loggedInUser.id;
     let totalOrderPrice = 0;
@@ -116,18 +116,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     document.getElementById('cart_total_price').textContent = totalOrderPrice + "원";
     document.getElementById('cart_total_amount').textContent = totalAmount + "개";
-});
 
-//사용자 주소
-function displayUserAddress() {
-    // 배송지 요소에 사용자의 주소를 설정합니다.
-    var addressElement = document.querySelector('.userAddress');
-    addressElement.textContent = userAddress
-}
+    //사용자 주소
+    function displayUserAddress() {
+        // 배송지 요소에 사용자의 주소를 설정합니다.
+        var addressElement = document.querySelector('.userAddress');
+        addressElement.textContent = loggedInUser.address;
+    }
 // 페이지가 로드되면 사용자의 주소를 화면에 표시합니다.
-document.addEventListener('DOMContentLoaded', function() {
     displayUserAddress();
 });
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//
+// });
 
 let orderKey = "orderKey";
 localStorage.setItem(orderKey, JSON.stringify(orderDetailData));
