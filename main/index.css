@@ -71,8 +71,9 @@ html, body {
 .searchPicture {
     position : absolute;
     width: 20px;
-    top: 17px;
+    top: 15px;
     right: 11px;
+    cursor: pointer;
 }
 
 .iconContainer {
