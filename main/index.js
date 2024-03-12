@@ -33,9 +33,11 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem('allProduct',JSON.stringify(productData));
         console.log(productData);
     }
+
+    // 초기 로그인 상태 업데이트
+    updateLoginStatus();
+
 });
-
-
 
 
 const mainLogo = () => {
@@ -47,7 +49,14 @@ const mini1 = () => {
 }
 
 const mini2 = () => {
-    document.getElementById("contentFrame").setAttribute("src", "../login/login-page.html");
+    if (document.getElementById("mini2").textContent === '로그아웃') {
+        logout();
+        updateLoginStatus(); // 로그아웃 후 상태 업데이트
+        location.reload();
+
+    } else {
+        document.getElementById("contentFrame").setAttribute("src", "../login/login-page.html");
+    }
 }
 const cart = () => {
     document.getElementById("contentFrame").setAttribute("src", "../cart/cart.html");
@@ -56,3 +65,20 @@ const cart = () => {
 // const myPage = () => {
 //     // 마이페이지 아직 구현 안됨
 // }
+
+const logout = () => {
+    window.localStorage.removeItem('loggedInUser');
+}
+
+// 로그인 상태 업데이트 함수
+function updateLoginStatus() {
+    const loggedInUser = localStorage.getItem('loggedInUser');
+    if (loggedInUser !== null) {
+        document.getElementById("mini1").style.display = "none";
+        document.getElementById("mini2").innerText = '로그아웃';
+    } else {
+        document.getElementById("mini1").innerText = '회원가입';
+        document.getElementById("mini1").style.display = "block";
+        document.getElementById("mini2").innerText = '로그인';
+    }
+}

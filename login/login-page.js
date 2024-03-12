@@ -27,7 +27,14 @@ const login = () => {
             // 로그인 정보가 없는 경우, 로그인 페이지로 이동 또는 다른 작업 수행
             console.log('로그인 정보 없음');
         }
-        window.location.href = "../main/home.html";
+
+        if(loggedInUser.id === 3){ // 임시적으로 user_id 가 3인 id만 admin 계정으로 등록
+            window.parent.location.reload();
+            window.location.href = "../admin/admin-page.html";
+        } else {
+            window.parent.location.reload();
+            window.location.href = "../main/home.html";
+        }
     }
     else {
         // 로그인 실패
