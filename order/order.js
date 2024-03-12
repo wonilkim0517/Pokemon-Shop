@@ -1,3 +1,4 @@
+
 function addNewCartToOrderDetail(newProduct) {
     // 이미 있는 상품인지 확인
     let exisingOrderDetailIndex = orderDetailData.findIndex(item => item.product_id === newProduct.product_id);
@@ -11,28 +12,14 @@ function addNewCartToOrderDetail(newProduct) {
     }
 }
 
-// Todo : 동적으로 cartData에서 코드 받기
-let newOrderDetailData1 = {
-    "id": 1,
-    "order_id": 1,
-    "product_id": 101,
-    "orderDetail_quantity": 3
-};
-let newOrderDetailData2 = {
-    "id": 1,
-    "order_id": 1,
-    "product_id": 103,
-    "orderDetail_quantity": 11
-}
-
-// 주문 상세 데이터 추가
-addNewCartToOrderDetail(newOrderDetailData1);
-addNewCartToOrderDetail(newOrderDetailData2);
 console.log(orderDetailData);
 
 // DOMContentLoaded 이벤트 발생 시 실행할 함수
 document.addEventListener("DOMContentLoaded", function () {
     let loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+    let orderDetailData = JSON.parse(localStorage.getItem('orderKey'));
+
+    console.log(orderDetailData);
 
     // 사용자 정보 설정
     document.getElementById('orderDetail_user_name').textContent = loggedInUser.user_name;
@@ -74,3 +61,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     document.getElementById('orderDetail_total_price').textContent = totalOrderPrice + "원";
 });
+
