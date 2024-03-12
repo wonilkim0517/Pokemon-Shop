@@ -1,6 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
     let loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+    let orderDetailData = JSON.parse(localStorage.getItem('orderKey'));
 
     // 사용자 정보 설정
     document.getElementById('order_finish_user_name').textContent = loggedInUser.user_name;
@@ -34,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let product = productData.find(product => product.id === orderDetail.product_id);
 
         // 주문 상품 테이블에 추가
-        addOrderTable("order_finish_product", product.product_name, orderDetail.quantity, product.price * orderDetail.quantity);
+        addOrderTable("order_finish_product", product.product_name, orderDetail.orderDetail_quantity, product.price * orderDetail.orderDetail_quantity);
 
         // 로컬 스토리지에 상품 정보 저장
         let cartKey = 'cartKey' + orderDetail.id; // 수정된 부분
