@@ -1,23 +1,3 @@
-function updateOrderDetailData(cartItem) {
-    // 이미 있는 상품인지 확인
-    let existingOrderDetailIndex = orderDetailData.findIndex(item => item.product_id === cartItem.product_id);
-
-    if (existingOrderDetailIndex !== -1) {
-        // 이미 있는 상품이면 해당 상품의 orderDetail_quantity를 증가시킴
-        orderDetailData[existingOrderDetailIndex].orderDetail_quantity += cartItem.cart_quantity;
-    } else {
-        // 존재하지 않는 상품이면 새로운 상품을 추가
-        let newOrderDetail = {
-            "id": orderDetailData.length + 1,
-            "order_id": cartItem.order_id,
-            "product_id": cartItem.product_id,
-            "orderDetail_quantity": cartItem.cart_quantity
-        };
-
-        orderDetailData.push(newOrderDetail);
-    }
-}
-
 function addNewProductToCart(newProduct) {
     // 이미 있는 상품인지 확인
     let existingProductIndex = cartData.findIndex(item => item.product_id === newProduct.product_id);
@@ -25,15 +5,9 @@ function addNewProductToCart(newProduct) {
     if (existingProductIndex !== -1) {
         // 이미 있는 상품이면 해당 상품의 cart_quantity를 증가시킴
         cartData[existingProductIndex].cart_quantity += newProduct.cart_quantity;
-
-        // 주문 상세 데이터 업데이트
-        updateOrderDetailData(cartData[existingProductIndex]);
     } else {
         // 존재하지 않는 상품이면 새로운 상품을 추가
         cartData.push(newProduct);
-
-        // 주문 상세 데이터 업데이트
-        updateOrderDetailData(newProduct);
     }
 }
 
@@ -42,7 +16,7 @@ let newProduct1 = {
     "id": 1, // 새로운 상품의 고유 식별자
     "user_id": 2, // 사용자 ID
     "product_id": 102, // 상품 ID
-    "cart_quantity": 2, // 장바구니에 담은 상품 수량
+    "cart_quantity": 1, // 장바구니에 담은 상품 수량
     "is_ordered": 0 // 주문 여부 (0: 주문 전)
 };
 
@@ -72,20 +46,8 @@ let newProduct4 = {
 // 새로운 상품을 장바구니에 추가
 addNewProductToCart(newProduct4);
 
-
-let newProduct5 = {
-    "id": 2, // 새로운 상품의 고유 식별자
-    "user_id": 2, // 사용자 ID
-    "product_id": 102, // 상품 ID
-    "cart_quantity": 13, // 장바구니에 담은 상품 수량
-    "is_ordered": 0 // 주문 여부 (0: 주문 전)
-};
-
-// 새로운 상품을 장바구니에 추가
-addNewProductToCart(newProduct5);
-
 console.log(cartData);
-console.log(orderDetailData)
+
 document.addEventListener("DOMContentLoaded", function () {
     const loggedInUser = userData[2]; // 세 번째 사용자 정보를 사용하겠다고 가정
     userAddress=loggedInUser.address;
@@ -130,6 +92,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('cart_total_amount').textContent = totalAmount + "개";
 });
 
+
+
+
+
 //사용자 주소
 function displayUserAddress() {
     // 배송지 요소에 사용자의 주소를 설정합니다.
@@ -140,6 +106,3 @@ function displayUserAddress() {
 document.addEventListener('DOMContentLoaded', function() {
     displayUserAddress();
 });
-
-let orderKey = "orderKey";
-localStorage.setItem(orderKey, JSON.stringify(orderDetailData));
