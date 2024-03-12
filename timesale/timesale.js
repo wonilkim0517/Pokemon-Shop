@@ -1,30 +1,54 @@
-const saleStartTime = new Date("2024-03-11T00:00:00"); // 타임세일 시작 시간
-const saleEndTime = new Date("2024-03-11T23:59:59");   // 타임세일 종료 시간
+document.addEventListener("DOMContentLoaded", function () {
+    // 상품 데이터
+    const products = [
+        { name: "상품1", price: "10000원", image: "../product/product-img/pokemon_one_flower_01.png" },
+        { name: "상품2", price: "20000원", image: "../product/product-img/pokemon_one_flower_02.png" },
+        { name: "상품3", price: "30000원", image: "../product/product-img/pokemon_one_flower_03.png" },
+        // 나머지 상품 데이터도 추가
+    ];
 
-function isSaleActive() {
-    const currentTime = new Date();
-    return currentTime >= saleStartTime && currentTime <= saleEndTime;
-}
-
-function applyTimeSale() {
-    const products = document.querySelectorAll('.product');
-    const discountPercent = 20; // 할인율 설정
-
+    // 상품 목록을 동적으로 생성하여 추가
+    const productsContainer = document.querySelector('.products');
     products.forEach(product => {
-        const productId = parseInt(product.getAttribute('data-product-id'));
-        const productInfo = productData.find(item => item.id === productId);
+        const productElement = document.createElement('div');
+        productElement.classList.add('product');
 
-        if (isSaleActive()) {
-            const discountedPrice = productInfo.price * (1 - discountPercent / 100);
-            product.querySelector('.product_info').innerHTML = `가격: <del>${productInfo.price}원</del> ${discountedPrice}원`;
-        } else {
-            product.querySelector('.product_info').innerHTML = `가격: ${productInfo.price}원`;
-        }
+        const imageElement = document.createElement('img');
+        imageElement.src = product.image;
+        imageElement.alt = product.name;
+        productElement.appendChild(imageElement);
+
+        const nameElement = document.createElement('p');
+        nameElement.textContent = product.name;
+        nameElement.classList.add('product_info');
+        productElement.appendChild(nameElement);
+
+        const priceElement = document.createElement('p');
+        priceElement.textContent = product.price;
+        priceElement.classList.add('product_info');
+        productElement.appendChild(priceElement);
+
+        productsContainer.appendChild(productElement);
     });
-}
 
-applyTimeSale(); // 페이지 로딩 시 타임세일 적용
+    // 타임 세일 마감까지의 시간 표시
+    const saleEndDate = new Date('2024-03-29T23:59:59'); // 타임 세일 종료일 설정
+    const timeRemainingElement = document.getElementById('timeRemaining');
+    function updateRemainingTime() {
+        const now = new Date();
+        const timeDiff = saleEndDate - now;
 
-// 이후에 필요에 따라 타임세일을 주기적으로 업데이트하거나 사용자 액션에 응답하는 등의 로직을 추가할 수 있습니다.
+        if (timeDiff <= 0) {
+            timeRemainingElement.textContent = "타임 세일 종료";
+        } else {
+            const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+            timeRemainingElement.textContent = `남은 시간: ${days}일 ${hours}시간 ${minutes}분 ${seconds}초`;
+        }
+    }
+    updateRemainingTime();
+    setInterval(updateRemainingTime, 1000); // 1초마다 남은 시간 업데이트
 });
-</script>
