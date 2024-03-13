@@ -1,12 +1,12 @@
-import data from '../data/data.js';
-
 document.addEventListener("DOMContentLoaded", async function () {
     const productsContainer = document.querySelector('.products');
 
     // 서버로부터 상품 데이터를 가져오는 함수
     async function fetchProductData() {
         try {
-            return data.productData; // productData를 반환
+            const allProducts = JSON.parse(localStorage.getItem('allProduct'));
+            // localStorage에 상품 데이터가 없을 경우 디폴트 상품 데이터 사용
+            return allProducts ? allProducts.slice(0, 5) : data.productData.slice(0, 5);
         } catch (error) {
             console.error('상품 데이터를 가져오는 중 에러 발생:', error);
             return []; // 오류 발생 시 빈 배열 반환
@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // 대체 이미지 URL
     const defaultImgUrl = '../data/defaultImg_pikachu.jpg';
+    const failImgUrl = '../data/fail_Img.png';
 
     // 상품 데이터를 받아와서 화면에 표시하는 함수
     async function displayProducts() {
@@ -25,7 +26,11 @@ document.addEventListener("DOMContentLoaded", async function () {
             productElement.classList.add('product');
 
             const imageElement = document.createElement('img');
-            imageElement.src = product.image || defaultImgUrl; // 이미지가 없는 경우 대체 이미지 사용
+            // 이미지가 없을 때 또는 이미지 경로가 잘못된 경우 대체 이미지 사용
+            imageElement.src = product.image ? product.image : defaultImgUrl;
+            imageElement.onerror = function() {
+                this.src = failImgUrl;
+            }
             imageElement.alt = product.product_name;
             productElement.appendChild(imageElement);
 
