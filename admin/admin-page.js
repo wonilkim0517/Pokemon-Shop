@@ -28,16 +28,16 @@ const goods_stock = () => {
     var stock = document.getElementById("stock").value;
     var price = document.getElementById("price").value;
     var content = document.getElementById("content").value;
-    // var image = document.getElementById("image").value;
+    var image = document.getElementById("image").value;
 
-    // 사용자 이름, 이메일, 비밀번호 모두 입력되었는지 확인
+    // 상품 이름, 재고, 가격, 내용 입력되었는지 확인
     if (product_name.trim() === '' || stock.trim() === '' || price.trim() === '' || content.trim() === '') {
         alert("필수 입력 필드를 작성해주세요.");
         return; // 필수 입력 필드가 비어있을 경우 함수 종료
     }
     else if (product_name.trim() !== '') {
         for (let i = 0; i < allProduct.length; i++) {
-            if (allProduct[i].email === product_name) {
+            if (allProduct[i].product_name === product_name) {
                 alert("중복된 상품 이름 입니다.");
                 return; // 중복된 경우 함수 종료
             }
@@ -46,7 +46,7 @@ const goods_stock = () => {
 
     // 상품 json data 틀 작성 및 동적으로 추가하기 위한 구조 구성
     const newProduct = {
-        "id": productData.length + 101,
+        "id": allProduct.length + 101,
         "product_name": product_name,
         "stock": stock,
         "price": price,
@@ -58,7 +58,7 @@ const goods_stock = () => {
     console.log(allProduct.length);
     alert("재고 추가 완료");
     console.log(allProduct);
-    location.href = "../main/index.html";
+    // location.href = "../main/index.html";
 }
 
 document.addEventListener("DOMContentLoaded", function () {
