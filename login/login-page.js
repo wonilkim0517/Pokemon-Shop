@@ -28,8 +28,8 @@ const login = () => {
             console.log('로그인 정보 없음');
         }
 
-        if(loggedInUser.id === 3){ // 임시적으로 user_id 가 3인 id만 admin 계정으로 등록
-            window.parent.location.reload();
+        if(loggedInUser.nickname === 'pyh'){ // 임시적으로 nickname 이 pyh인 계정만 admin 계정으로 등록
+            // window.parent.location.reload();
             window.location.href = "../admin/admin-page.html";
         } else {
             window.parent.location.reload();

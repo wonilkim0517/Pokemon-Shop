@@ -35,7 +35,7 @@ const data = {
             stock: 50,
             price: 10000,
             content: "설명1",
-            image: ""
+            image: "main-img/pokemon_one_flower_01.png"
         },
         {
             id: 102,
@@ -43,7 +43,7 @@ const data = {
             stock: 50,
             price: 20000,
             content: "설명2",
-            image: ""
+            image: "main-img/pokemon_earth_digda.png"
         },
         {
             id: 103,
@@ -51,7 +51,7 @@ const data = {
             stock: 50,
             price: 30000,
             content: "",
-            image: ""
+            image: "main-img/pokemon_water_kkobugi.png"
         }
     ],
     orderDetailData: [
