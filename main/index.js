@@ -71,6 +71,11 @@ const logout = () => {
 }
 
 const search = () => {
+    var searchKeyword = document.getElementById('searchInput').value; // 검색어 입력란의 값
+
+    // localStorage에 검색어 저장
+    localStorage.setItem('searchKeyword', searchKeyword);
+
     document.getElementById("contentFrame").setAttribute("src", "../search/search.html");
 }
 
