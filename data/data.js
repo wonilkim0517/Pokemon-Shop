@@ -83,4 +83,11 @@ const data = {
     ]
 };
 
-export default data;
+
+let userData = data.userData;
+let productData = data.productData;
+let orderDetailData = data.orderDetailData;
+let orderData = data.orderData;
+let cartData = data.cartData;
+
+

@@ -76,8 +76,8 @@ console.log(cartData);
 console.log(orderDetailData)
 document.addEventListener("DOMContentLoaded", function () {
     let loggedInUser = JSON.parse(localStorage.getItem('loggedInUser')); // 세 번째 사용자 정보를 사용하겠다고 가정
-    userAddress=loggedInUser.address;
-    userId=loggedInUser.id;
+    // let userAddress=loggedInUser.address;
+    // let userId=loggedInUser.id;
     let totalOrderPrice = 0;
     let totalAmount = 0;
 
