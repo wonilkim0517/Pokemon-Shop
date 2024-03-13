@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b7c4acb-b4d4-4152-9dc3-a8c4556612bd" name="Changes" comment="인텔리제이 연동 test">
+      <change afterPath="$PROJECT_DIR$/.idea/shop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timesale/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timesale/pokemon_banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timesale/timesale-bannerImg.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/admin-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin-page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/timesale/timesale.css" beforeDir="false" afterPath="$PROJECT_DIR$/timesale/timesale.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/timesale/timesale.html" beforeDir="false" afterPath="$PROJECT_DIR$/timesale/timesale.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/timesale/timesale.js" beforeDir="false" afterPath="$PROJECT_DIR$/timesale/timesale.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +27,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2daXHRXaSfIBuHlHxbxdYi9NSyg" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -34,11 +40,12 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "lys-branch",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "lys",
     "ignore_missing_gitignore": "true",
     "jdk.selected.JAVA_MODULE": "openjdk-21.0.1",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/rosco0611/workspace/shoppingmall",
+    "last_opened_file_path": "C:/Users/rosco0611/workspace/jquery.countdown.package-2.1.0",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -50,6 +57,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rosco0611\workspace\shop\timesale" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -66,6 +78,8 @@
       <option name="presentableId" value="Default" />
       <updated>1710247074957</updated>
       <workItem from="1710247075982" duration="862000" />
+      <workItem from="1710252987008" duration="2150000" />
+      <workItem from="1710257203338" duration="6159000" />
     </task>
     <task id="LOCAL-00001" summary="인텔리제이 연동 test">
       <option name="closed" value="true" />
@@ -80,6 +94,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="인텔리제이 연동 test" />
