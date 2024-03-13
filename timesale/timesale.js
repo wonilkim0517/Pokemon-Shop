@@ -1,35 +1,47 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // 상품 데이터
-    const products = [
-        { name: "상품1", price: "10000원", image: "../product/product-img/pokemon_one_flower_01.png" },
-        { name: "상품2", price: "20000원", image: "../product/product-img/pokemon_one_flower_02.png" },
-        { name: "상품3", price: "30000원", image: "../product/product-img/pokemon_one_flower_03.png" },
-        // 나머지 상품 데이터도 추가
-    ];
+import data from '../data/data.js';
 
-    // 상품 목록을 동적으로 생성하여 추가
+document.addEventListener("DOMContentLoaded", async function () {
     const productsContainer = document.querySelector('.products');
-    products.forEach(product => {
-        const productElement = document.createElement('div');
-        productElement.classList.add('product');
 
-        const imageElement = document.createElement('img');
-        imageElement.src = product.image;
-        imageElement.alt = product.name;
-        productElement.appendChild(imageElement);
+    // 서버로부터 상품 데이터를 가져오는 함수
+    async function fetchProductData() {
+        try {
+            return data.productData; // productData를 반환
+        } catch (error) {
+            console.error('상품 데이터를 가져오는 중 에러 발생:', error);
+            return []; // 오류 발생 시 빈 배열 반환
+        }
+    }
 
-        const nameElement = document.createElement('p');
-        nameElement.textContent = product.name;
-        nameElement.classList.add('product_info');
-        productElement.appendChild(nameElement);
+    // 대체 이미지 URL
+    const defaultImgUrl = '../data/defaultImg_pikachu.jpg';
 
-        const priceElement = document.createElement('p');
-        priceElement.textContent = product.price;
-        priceElement.classList.add('product_info');
-        productElement.appendChild(priceElement);
+    // 상품 데이터를 받아와서 화면에 표시하는 함수
+    async function displayProducts() {
+        const products = await fetchProductData(); // 상품 데이터 가져오기
 
-        productsContainer.appendChild(productElement);
-    });
+        products.forEach(product => {
+            const productElement = document.createElement('div');
+            productElement.classList.add('product');
+
+            const imageElement = document.createElement('img');
+            imageElement.src = product.image || defaultImgUrl; // 이미지가 없는 경우 대체 이미지 사용
+            imageElement.alt = product.product_name;
+            productElement.appendChild(imageElement);
+
+            const nameElement = document.createElement('p');
+            nameElement.textContent = product.product_name;
+            nameElement.classList.add('product_info');
+            productElement.appendChild(nameElement);
+
+            const priceElement = document.createElement('p');
+            priceElement.textContent = `가격: ${product.price}원`;
+            priceElement.classList.add('product_info');
+            productElement.appendChild(priceElement);
+
+            productsContainer.appendChild(productElement);
+        });
+    }
 
     // 타임 세일 마감까지의 시간 표시
     const saleEndDate = new Date('2024-03-29T23:59:59'); // 타임 세일 종료일 설정
@@ -51,4 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     updateRemainingTime();
     setInterval(updateRemainingTime, 1000); // 1초마다 남은 시간 업데이트
+
+    // 상품 표시 함수 호출
+    displayProducts();
 });
