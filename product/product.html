@@ -12,28 +12,28 @@
                 <img id="main_img" src="product-img/pokemon_one_flower_01.png" alt=""><br>
                 <div class="img_detail">
                     <img id="default_img" onclick="changeMainImage(this, 'product-img/pokemon_one_flower_01.png')" src="product-img/pokemon_one_flower_01.png" alt="">
-                    <img onclick="changeMainImage(this, 'product-img/pokemon_one_flower_02.png')" src="product-img/pokemon_one_flower_02.png" alt="">
-                    <img onclick="changeMainImage(this, 'product-img/pokemon_one_flower_03.png')" src="product-img/pokemon_one_flower_03.png" alt="">
-                    <img onclick="changeMainImage(this, 'product-img/pokemon_one_flower_04.png')" src="product-img/pokemon_one_flower_04.png" alt="">
-                    <img onclick="changeMainImage(this, 'product-img/pokemon_one_flower_05.png')" src="product-img/pokemon_one_flower_05.png" alt="">
-                    <img onclick="changeMainImage(this, 'product-img/pokemon_one_flower_06.png')" src="product-img/pokemon_one_flower_06.png" alt="">
-                    <img onclick="changeMainImage(this, 'product-img/pokemon_one_flower_07.png')" src="product-img/pokemon_one_flower_07.png" alt="">
-                    <img onclick="changeMainImage(this, 'product-img/pokemon_one_flower_08.png')" src="product-img/pokemon_one_flower_08.png" alt="">
-                    <img onclick="changeMainImage(this, 'product-img/pokemon_one_flower_09.png')" src="product-img/pokemon_one_flower_09.png" alt="">
-                    <img onclick="changeMainImage(this, 'product-img/pokemon_one_flower_10.png')" src="product-img/pokemon_one_flower_10.png" alt="">
-                    <img onclick="changeMainImage(this, 'product-img/pokemon_one_flower_11.png')" src="product-img/pokemon_one_flower_11.png" alt="">
+                    <img id="image1" onclick="changeMainImage(this, 'product-img/pokemon_one_flower_02.png')" src="product-img/pokemon_one_flower_02.png" alt="">
+                    <img id="image2" onclick="changeMainImage(this, 'product-img/pokemon_one_flower_03.png')" src="product-img/pokemon_one_flower_03.png" alt="">
+                    <img id="image3" onclick="changeMainImage(this, 'product-img/pokemon_one_flower_04.png')" src="product-img/pokemon_one_flower_04.png" alt="">
+                    <img id="image4" onclick="changeMainImage(this, 'product-img/pokemon_one_flower_05.png')" src="product-img/pokemon_one_flower_05.png" alt="">
+                    <img id="image5" onclick="changeMainImage(this, 'product-img/pokemon_one_flower_06.png')" src="product-img/pokemon_one_flower_06.png" alt="">
+                    <img id="image6" onclick="changeMainImage(this, 'product-img/pokemon_one_flower_07.png')" src="product-img/pokemon_one_flower_07.png" alt="">
+                    <img id="image7" onclick="changeMainImage(this, 'product-img/pokemon_one_flower_08.png')" src="product-img/pokemon_one_flower_08.png" alt="">
+                    <img id="image8" onclick="changeMainImage(this, 'product-img/pokemon_one_flower_09.png')" src="product-img/pokemon_one_flower_09.png" alt="">
+                    <img id="image9" onclick="changeMainImage(this, 'product-img/pokemon_one_flower_10.png')" src="product-img/pokemon_one_flower_10.png" alt="">
+                    <img id="image10" onclick="changeMainImage(this, 'product-img/pokemon_one_flower_11.png')" src="product-img/pokemon_one_flower_11.png" alt="">
                 </div>
             </span>
             <span class="product_name">
-                <h2>포켓몬센터 한 송이 꽃병 MIMOSA e POKÉMON 피카츄</h2><hr style="border: 2px solid gray">
+                <h2 id="product_title"></h2><hr style="border: 2px solid gray">
                 <table style="margin-top: 20px">
                     <tr>
                         <td style="width: 300px">판매가</td>
-                        <td id="price">10000원</td>
+                        <td id="price"></td>
                     </tr>
                     <tr>
                         <td>상품코드</td>
-                        <td>-----</td>  <!-- 상품 아이디 입력 -->
+                        <td id="product_id"></td>  <!-- 상품 아이디 입력 -->
                     </tr>
                     <tr>
                         <td>제조사 / 공급사</td>
@@ -69,30 +69,30 @@
                     <table style="font-size: 30px; font-weight: bold">
                         <tr>
                             <td style="width: 200px">결제 금액</td>
-                            <td id="final_price" style="text-align: right">10000원</td>
+                            <td id="final_price" style="text-align: right"></td>
                         </tr>
                     </table>
                     <hr>
                 </div>
                 <div class="product_price">
-                    <button onclick="window.location.href='../cart/cart.html'">장바구니</button>&nbsp    <!-- 장바구니 페이지 이동 -->
+                    <button onclick="addNewProductToCart()">장바구니</button>&nbsp    <!-- 장바구니 페이지 이동 -->
                     <button onclick="window.location.href='../order/order.html'">결제하기</button>   <!-- 결제 페이지 이동 -->
                 </div>
             </span>
         </div>
         <div class="product_detail">제품 상세</div><br><hr style="left: 30px; width: 90%">
         <div class="image_all">
-            <img src="product-img/pokemon_one_flower_01.png" alt=""><br>
-            <img src="product-img/pokemon_one_flower_02.png" alt=""><br>
-            <img src="product-img/pokemon_one_flower_03.png" alt=""><br>
-            <img src="product-img/pokemon_one_flower_04.png" alt=""><br>
-            <img src="product-img/pokemon_one_flower_05.png" alt=""><br>
-            <img src="product-img/pokemon_one_flower_06.png" alt=""><br>
-            <img src="product-img/pokemon_one_flower_07.png" alt=""><br>
-            <img src="product-img/pokemon_one_flower_08.png" alt=""><br>
-            <img src="product-img/pokemon_one_flower_09.png" alt=""><br>
-            <img src="product-img/pokemon_one_flower_10.png" alt=""><br>
-            <img src="product-img/pokemon_one_flower_11.png" alt=""><br>
+            <img id="image_detail1" src="product-img/pokemon_one_flower_01.png" alt=""><br>
+            <img id="image_detail2" src="product-img/pokemon_one_flower_02.png" alt=""><br>
+            <img id="image_detail3" src="product-img/pokemon_one_flower_03.png" alt=""><br>
+            <img id="image_detail4" src="product-img/pokemon_one_flower_04.png" alt=""><br>
+            <img id="image_detail5" src="product-img/pokemon_one_flower_05.png" alt=""><br>
+            <img id="image_detail6" src="product-img/pokemon_one_flower_06.png" alt=""><br>
+            <img id="image_detail7" src="product-img/pokemon_one_flower_07.png" alt=""><br>
+            <img id="image_detail8" src="product-img/pokemon_one_flower_08.png" alt=""><br>
+            <img id="image_detail9" src="product-img/pokemon_one_flower_09.png" alt=""><br>
+            <img id="image_detail10" src="product-img/pokemon_one_flower_10.png" alt=""><br>
+            <img id="image_detail11" src="product-img/pokemon_one_flower_11.png" alt=""><br>
         </div>
     </div>
 </body>
