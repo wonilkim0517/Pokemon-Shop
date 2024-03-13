@@ -75,7 +75,7 @@ const data = {
     cartData: [
         {
             id: 1,
-            user_id: 2,
+            user_id: 5,
             product_id: 101,
             cart_quantity: 0,
             is_ordered: 0
