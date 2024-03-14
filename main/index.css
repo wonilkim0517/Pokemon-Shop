@@ -16,7 +16,7 @@ html, body {
 
 .signinContainer {
     width: 100%;
-    padding-right: 99px;
+    padding-right: 145px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -27,6 +27,10 @@ html, body {
     font-size: 20px;
     padding-right: 20px;
     cursor: pointer;
+}
+
+.userInfoSpace {
+    font-weight: bold;
 }
 
 .fixedContainer {
