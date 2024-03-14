@@ -1,19 +1,21 @@
-body {
+* {
+    box-sizing: border-box;
+}
+
+html, body {
     margin: 0;
+    padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .all {
+    width: 100%;
     text-align: center;
-    padding-top: 30px;
 }
 
 .timesaleBanner {
     width: 100%;
-    height: 300px;
-    background-image: url("../timesale/pokemon_banner.png");
-    background-size: cover;
-    background-position: center 30%;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,7 +24,19 @@ body {
     font-size: 40px;
     padding: 20px;
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.timesaleBanner img {
+    filter: blur(3.5px);
+    background-size: cover;
+}
+
+.textBox {
+    white-space: nowrap;
+    position: absolute;
+    top: 85px;
+    left: 500px;
 }
 
 
@@ -32,12 +46,20 @@ body {
 }
 
 .sale-date {
+    font-weight: bold;
     font-size: 24px;
     margin-top: 10px;
 }
 
+.bodyContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .title {
-    margin-top: 50px;
+    margin-top: 200px;
     font-size: 30px;
 }
 
@@ -76,6 +98,7 @@ body {
 #timeRemaining {
     font-size: 24px;
     margin-top: 10px;
+    font-weight: bold;
 }
 
 .product_price {
