@@ -43,8 +43,18 @@ document.addEventListener("DOMContentLoaded", async function () {
                 productElement.appendChild(nameElement);
 
                 const priceElement = document.createElement('p');
-                priceElement.textContent = `가격: ${product.price}원`;
-                priceElement.classList.add('product_info');
+                priceElement.classList.add('product_price');
+
+                const originalPriceElement = document.createElement('span');
+                originalPriceElement.textContent = `${product.price}원`;
+                originalPriceElement.classList.add('original_price');
+                priceElement.appendChild(originalPriceElement);
+
+                const discountPriceElement = document.createElement('span');
+                discountPriceElement.textContent = ` ${product.discount_price}원`;
+                discountPriceElement.classList.add('discount_price');
+                priceElement.appendChild(discountPriceElement);
+
                 productElement.appendChild(priceElement);
 
                 // 상품 클릭 시 상세 페이지로 이동하는 이벤트 리스너 추가
