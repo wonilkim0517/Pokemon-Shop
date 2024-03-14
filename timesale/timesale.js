@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         try {
             const allProducts = JSON.parse(localStorage.getItem('allProduct'));
             // localStorage에 상품 데이터가 없을 경우 디폴트 상품 데이터 사용
+            console.log(allProducts);
             return allProducts ? allProducts.slice(0, 5) : data.productData.slice(0, 5);
         } catch (error) {
             console.error('상품 데이터를 가져오는 중 에러 발생:', error);
