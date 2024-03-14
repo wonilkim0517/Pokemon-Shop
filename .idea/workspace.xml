@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b7c4acb-b4d4-4152-9dc3-a8c4556612bd" name="Changes" comment="타임세일 최최종완성 commit">
+    <list default="true" id="2b7c4acb-b4d4-4152-9dc3-a8c4556612bd" name="Changes" comment="최종완성 commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/product/product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/timesale/timesale.css" beforeDir="false" afterPath="$PROJECT_DIR$/timesale/timesale.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/timesale/timesale.html" beforeDir="false" afterPath="$PROJECT_DIR$/timesale/timesale.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/timesale/timesale.js" beforeDir="false" afterPath="$PROJECT_DIR$/timesale/timesale.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +94,7 @@
       <workItem from="1710321764756" duration="574000" />
       <workItem from="1710322345097" duration="5349000" />
       <workItem from="1710409750191" duration="1380000" />
-      <workItem from="1710417898963" duration="2286000" />
+      <workItem from="1710417898963" duration="5133000" />
     </task>
     <task id="LOCAL-00001" summary="인텔리제이 연동 test">
       <option name="closed" value="true" />
@@ -133,7 +128,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710411819037</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="최종완성 commit">
+      <option name="closed" value="true" />
+      <created>1710420549823</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710420549823</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +170,7 @@
     <MESSAGE value="할인 가격 표시 commit(제품 상세 페이지 제외)" />
     <MESSAGE value="중간 commit" />
     <MESSAGE value="타임세일 최최종완성 commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="타임세일 최최종완성 commit" />
+    <MESSAGE value="최종완성 commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="최종완성 commit" />
   </component>
 </project>
