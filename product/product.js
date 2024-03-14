@@ -150,6 +150,12 @@ console.log(selectedProduct.id)
 console.log(cartData.product_id)
 
 function addNewProductToCart() {
+
+    if (!loggedInUser || !loggedInUser.id) {
+        alert("로그인이 필요합니다")
+        window.location.href = "../login/login-page.html";
+        return;
+    }
     // 이미 있는 상품인지 확인
     let existingProductIndex = cartData.findIndex(item => item.user_id === loggedInUser.id && item.product_id === selectedProduct.id);
 
