@@ -64,3 +64,9 @@ section {
     left: 70px;
     font-size: 25px;
 }
+
+/* 할인된 가격 스타일 */
+.discountedPrice {
+    font-size: 20px;
+    color: red; /* 할인 가격은 빨간색으로 표시 */
+}

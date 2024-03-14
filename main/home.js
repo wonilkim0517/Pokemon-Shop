@@ -1,4 +1,4 @@
-let allProduct = JSON.parse(localStorage.getItem(('allProduct')));
+let allProduct = JSON.parse(localStorage.getItem('allProduct'));
 
 function addProducts() {
     var productContainer = document.getElementById('productContainer');
@@ -14,13 +14,32 @@ function addProducts() {
 
         var productName = document.createElement('p');
         productName.className = 'product_info';
-        let currentProduct = product.product_name
+        let currentProduct = product.product_name;
         productName.textContent = currentProduct;
 
         var productPrice = document.createElement('p');
         productPrice.className = 'product_info';
-        productPrice.textContent = product.price;
 
+        // 할인된 가격이 있으면 원래 가격과 할인 가격을 함께 표시합니다.
+        if (product.discount_price !== undefined) {
+            var originalPrice = document.createElement('span');
+            originalPrice.textContent = product.price;
+            originalPrice.style.textDecoration = 'line-through';
+
+            productPrice.appendChild(originalPrice);
+
+            var discountPrice = document.createElement('span');
+            discountPrice.textContent = product.discount_price;
+            discountPrice.style.color = 'red';
+            discountPrice.style.fontSize = '1.2em'; // 할인된 가격의 글꼴 크기를 강조
+            discountPrice.style.fontWeight = 'bold'; // 할인된 가격의 글꼴 굵기를 강조
+
+            productPrice.appendChild(document.createTextNode(' ')); // 가격 사이에 공백 추가
+            productPrice.appendChild(discountPrice);
+        } else {
+            // 할인된 가격이 없으면 원래 가격만 표시합니다.
+            productPrice.textContent = product.price;
+        }
 
         // 나중에 검색을 위해 제품 이름을 저장하는 속성을 추가합니다.
         productLink.setAttribute('data-product-name', currentProduct);
@@ -36,13 +55,12 @@ function addProducts() {
             // 나중에 사용을 위해 선택한 제품을 로컬 스토리지에 저장합니다.
             localStorage.setItem('selectedProduct', JSON.stringify(selectProduct));
         });
+
         productLink.appendChild(productImage);
         productLink.appendChild(document.createElement('br'));
         productLink.appendChild(productName);
         productContainer.appendChild(productLink);
-
         productLink.appendChild(productPrice);
-
     });
 }
 
