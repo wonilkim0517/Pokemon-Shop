@@ -52,7 +52,8 @@ document.addEventListener("DOMContentLoaded", function () {
     function displayUserAddress() {
         // 배송지 요소에 사용자의 주소를 설정합니다.
         var addressElement = document.querySelector('.userAddress');
-        addressElement.textContent = loggedInUser.address;
+        // addressElement.textContent = loggedInUser.address; 초기 코드!!!!!!!!!
+        addressElement.innerHTML = "<br>" + loggedInUser.address;
     }
 
     // 페이지가 로드되면 사용자의 주소를 화면에 표시합니다.
