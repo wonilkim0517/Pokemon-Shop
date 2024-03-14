@@ -29,9 +29,14 @@ function addProducts() {
         productLink.href = '../product/product.html';
 
         var productImage = document.createElement('img');
-        productImage.src = product.image;
+        productImage.src = product.image ? product.image : 'data/fail_Img.png';
         productImage.alt = '';
         productImage.className = 'product';
+
+        // 이미지 로드 실패 시 대체 이미지로 처리
+        productImage.onerror = function () {
+            this.src = '../data/fail_Img.png';
+        };
 
         var productName = document.createElement('p');
         productName.className = 'product_info';

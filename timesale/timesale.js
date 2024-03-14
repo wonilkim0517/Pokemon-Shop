@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 
     // 대체 이미지 URL
-    const defaultImgUrl = '../data/default_Img.webp';
-    const failImgUrl = '../data/default_Img.webp';
+    const defaultImgUrl = '../data/fail_Img.png';
+    const failImgUrl = '../data/fail_Img.png';
 
     // 상품 데이터를 받아와서 화면에 표시하는 함수
     async function displayProducts() {

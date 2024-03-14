@@ -43,30 +43,25 @@ document.addEventListener('DOMContentLoaded', function () {
             const detailImgElement = document.getElementById(imageDetailId);
             if (imgElement) {
                 const newImageUrl = "../main/" + selectedProduct.image.replace(/\d+\.png/, newSrc);
-                imgElement.onload = function () {
-                    console.log("이미지 로드 성공:", this.src);
-                };
                 imgElement.onerror = function () {
                     console.log("이미지 로드 실패:", this.src);
-                    this.style.display = "none"; // 이미지를 숨깁니다.
+                    this.src = '../data/fail_Img.png'; // 대체 이미지로 설정
                 };
                 imgElement.src = newImageUrl;
             }
             if (detailImgElement) {
                 const newImageUrl2 = "../main/" + selectedProduct.image.replace(/\d+\.png/, newSrc);
-                detailImgElement.onload = function () {
-                    console.log("이미지 로드 성공:", this.src);
-                };
                 detailImgElement.onerror = function () {
                     console.log("이미지 로드 실패:", this.src);
-                    this.style.display = "none"; // 이미지를 숨깁니다.
+                    this.src = '../data/fail_Img.png'; // 대체 이미지로 설정
                 };
                 detailImgElement.src = newImageUrl2;
             }
         }
+    } else {
+        // 이미지가 없는 경우 대체 이미지를 보여줍니다.
+        mainImage.src = '../data/fail_Img.png';
     }
-
-    // 초기화 또는 다른 작업 수행 가능
 });
 
 // - 누르면 수량 감소
