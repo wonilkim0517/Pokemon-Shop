@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>개인정보 수정</title>
+    <script src="../data/data.js"></script>
+    <script defer src="./userInfoEdit.js"></script>
     <link rel="stylesheet" href="./userInfoEdit.css">
 </head>
 <body>
@@ -15,11 +17,11 @@
         <hr class="hrFirst">
         <div class="inputContainer">
             <div class="text">비밀번호</div>
-            <input class="inputBox" type="ps" placeholder="현재 비밀번호를 입력해주세요" required>
+            <input class="inputBox" type="password" id="currentPassword" placeholder="현재 비밀번호를 입력해주세요" required>
         </div>
         <hr class="hrSecond">
         <div class="btnContainer">
-            <button type="submit" class="checkBtn" onclick="">확인</button>
+            <button type="submit" class="checkBtn" onclick="checkPassword()">확인</button>
         </div>
     </div>
 </body>
