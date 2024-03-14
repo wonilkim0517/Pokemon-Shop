@@ -3,20 +3,6 @@ let cartsData = JSON.parse(localStorage.getItem('cartKey'));
 let userCarts = cartsData.filter(cartItem => cartItem.user_id === loggedInUser.id);
 let allProduct = JSON.parse(localStorage.getItem('allProduct'));
 
-
-function addNewCartToOrderDetail(newProduct) {
-    // 이미 있는 상품인지 확인
-    let existingOrderDetailIndex = cartsData.findIndex(item => item.product_id === newProduct.product_id);
-
-    if (existingOrderDetailIndex !== -1) {
-        // 이미 있는 상품이면 해당 상품의 orderDetail_quantity를 증가시킴
-        cartsData[existingOrderDetailIndex].orderDetail_quantity += newProduct.orderDetail_quantity;
-    } else {
-        // 존재하지 않는 상품이면 새로운 상품을 추가
-        cartsData.push(newProduct);
-    }
-}
-
 console.log(cartsData);
 
 // DOMContentLoaded 이벤트 발생 시 실행할 함수
@@ -55,10 +41,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // 주문 상품 테이블에 추가
         addOrderTable("order_product", product.product_name, cart.cart_quantity, product.price * cart.cart_quantity);
-
-        // 로컬 스토리지에 상품 정보 저장
-        // let cartKey = 'cartKey' + cart.id; // 수정된 부분
-        // localStorage.setItem(cartKey, JSON.stringify(product));
     }
     document.getElementById('orderDetail_total_price').textContent = totalOrderPrice + "원";
 });
+
+function cartToOrderDetail() {
+    // 로컬 스토리지에서 주문 내역 데이터를 가져옵니다.
+    let orderDetailData = JSON.parse(localStorage.getItem('orderKey')) || [];
+
+    // 주문된 상품을 orderDetailData에 추가
+    for (let i = 0; i < userCarts.length; i++) {
+        let cart = userCarts[i];
+        let newOrderDetail = {
+            "id": orderDetailData.length + 1,
+            "order_id": cart.order_id,
+            "product_id": cart.product_id,
+            "orderDetail_quantity": cart.cart_quantity
+        };
+        orderDetailData.push(newOrderDetail);
+    }
+
+    // 수정된 orderDetailData를 로컬 스토리지에 저장
+    localStorage.setItem('orderKey', JSON.stringify(orderDetailData));
+
+    // 주문 완료 페이지로 이동
+    location.href='order_finish.html';
+    console.log(orderDetailData)
+}

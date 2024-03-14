@@ -1,6 +1,5 @@
 
 let loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
-let orderDetailData = JSON.parse(localStorage.getItem('orderKey'));
 let selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
 let cartData = JSON.parse(localStorage.getItem('cartKey'))
 

@@ -5,25 +5,7 @@ let allProduct = JSON.parse(localStorage.getItem('allProduct'));
 // Filter carts for the logged-in user
 let userCarts = cartsData.filter(cartItem => cartItem.user_id === loggedInUser.id);
 
-function updateOrderDetailData(cartItem) {
-    // 이미 있는 상품인지 확인
-    let existingOrderDetailIndex = orderDetailData.findIndex(item => item.product_id === cartItem.product_id);
 
-    if (existingOrderDetailIndex !== -1) {
-        // 이미 있는 상품이면 해당 상품의 orderDetail_quantity를 증가시킴
-        orderDetailData[existingOrderDetailIndex].orderDetail_quantity += cartItem.cart_quantity;
-    } else {
-        // 존재하지 않는 상품이면 새로운 상품을 추가
-        let newOrderDetail = {
-            "id": orderDetailData.length + 1,
-            "order_id": cartItem.order_id,
-            "product_id": cartItem.product_id,
-            "orderDetail_quantity": cartItem.cart_quantity
-        };
-
-        orderDetailData.push(newOrderDetail);
-    }
-}
 
 // 새로운 상품을 장바구니에 추가
 document.addEventListener("DOMContentLoaded", function () {
@@ -81,6 +63,3 @@ console.log(userCarts);
 // document.addEventListener('DOMContentLoaded', function() {
 //
 // });
-
-let orderKey = "orderKey";
-localStorage.setItem(orderKey, JSON.stringify(orderDetailData));
