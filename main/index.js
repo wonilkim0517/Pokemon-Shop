@@ -55,9 +55,9 @@ const cart = () => {
     document.getElementById("contentFrame").setAttribute("src", "../cart/cart.html");
 }
 
-// const myPage = () => {
-//     // 마이페이지 아직 구현 안됨
-// }
+const myPage = () => {
+    document.getElementById("contentFrame").setAttribute("src", "../mypage/mypage.html");
+}
 
 const logout = () => {
     window.localStorage.removeItem('loggedInUser');
