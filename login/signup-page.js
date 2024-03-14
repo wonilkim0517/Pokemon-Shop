@@ -22,7 +22,7 @@ const signup = () => {
     let passwordRegex = /^(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
 
 
-    let phoneRegex = /^\d{10,12}$/;
+    let phoneRegex = /^\d{3}-\d{4}-\d{4}$/;
 
     // 사용자 이름, 이메일, 비밀번호 모두 입력되었는지 확인
     if (userId.trim() === '' || ps.trim() === '' || psCheck.trim() === '' || userName.trim() === '' || address.trim() === '' || phoneNum.trim() === '') {
@@ -53,7 +53,7 @@ const signup = () => {
 
     // 사용자가 입력한 전화번호가 형식에 맞는지 확인
     if (!phoneRegex.test(phoneNum)) {
-        alert("전화번호는 10자에서 12자 사이의 숫자만 입력해주세요.");
+        alert("전화번호는 010-0000-0000 형식으로 입력해주세요.");
         return; // 전화번호 형식이 아닌 경우 함수 종료
     }
 
