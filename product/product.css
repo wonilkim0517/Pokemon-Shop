@@ -18,6 +18,10 @@ td {
     margin-left: 90px;
 }
 
+.all {
+    text-align: center;
+}
+
 .product_name {
     display: inline-block;
     font-size: 18px;
