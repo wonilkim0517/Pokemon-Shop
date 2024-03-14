@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b7c4acb-b4d4-4152-9dc3-a8c4556612bd" name="Changes" comment="타임세일에서 동적으로 데이터 받고 받은 데이터로 타임세일 페이지에 상품 띄우는 코드 (디폴트 상품 이미지: defaultImg_pikachu.jpg)">
+    <list default="true" id="2b7c4acb-b4d4-4152-9dc3-a8c4556612bd" name="Changes" comment="할인 가격 표시 commit(제품 상세 페이지 제외)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin-page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/timesale/timesale.css" beforeDir="false" afterPath="$PROJECT_DIR$/timesale/timesale.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/timesale/timesale.html" beforeDir="false" afterPath="$PROJECT_DIR$/timesale/timesale.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/timesale/timesale.js" beforeDir="false" afterPath="$PROJECT_DIR$/timesale/timesale.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +86,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710247282292</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="할인 가격 표시 commit(제품 상세 페이지 제외)">
+      <option name="closed" value="true" />
+      <created>1710392837909</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710392837909</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,6 +125,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="인텔리제이 연동 test" />
-    <option name="LAST_COMMIT_MESSAGE" value="인텔리제이 연동 test" />
+    <MESSAGE value="할인 가격 표시 commit(제품 상세 페이지 제외)" />
+    <option name="LAST_COMMIT_MESSAGE" value="할인 가격 표시 commit(제품 상세 페이지 제외)" />
   </component>
 </project>

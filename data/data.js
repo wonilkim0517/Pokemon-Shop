@@ -34,6 +34,9 @@ const data = {
             product_name: "포켓몬 꽃",
             stock: 50,
             price: 10000,
+            discount_price: 99,
+            start_timesale: "0000-00-00 00:00",
+            end_timesale: "0000-00-00 00:00",
             content: "설명1",
             image: "main-img/pokemon_one_flower_01.png"
         },

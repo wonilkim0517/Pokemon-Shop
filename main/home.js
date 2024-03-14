@@ -1,3 +1,24 @@
+// 타임 세일 마감까지의 시간 표시
+const saleEndDate = new Date('2024-03-29T23:59:59'); // 타임 세일 종료일 설정
+const timeRemainingElement = document.getElementById('timeRemaining');
+function updateRemainingTime() {
+    const now = new Date();
+    const timeDiff = saleEndDate - now;
+
+    if (timeDiff <= 0) {
+        timeRemainingElement.textContent = "타임 세일 종료";
+    } else {
+        const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+        timeRemainingElement.textContent = `남은 시간: ${days}일 ${hours}시간 ${minutes}분 ${seconds}초`;
+    }
+}
+updateRemainingTime();
+setInterval(updateRemainingTime, 1000); // 1초마다 남은 시간 업데이트
+
 let allProduct = JSON.parse(localStorage.getItem('allProduct'));
 
 function addProducts() {
