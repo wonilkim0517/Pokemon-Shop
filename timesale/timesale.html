@@ -6,21 +6,21 @@
     <link rel="stylesheet" href="timesale.css">
 </head>
 <body>
-<div class="main2">
-    <a href="#">
-        <div class="time_sale" style="text-align: center; font-size: 50px" onclick="window.location.href='../timesale/timesale.html'">
-            <div class="timesaleBanner">
-                <img src="../timesale/pokemon_banner.png" alt="">
-                <div class="textBox">
-                    <div class="bannerText">한정판 피규어 타임세일</div>
-                    <div class="sale-date">03.20~03.29</div>
-                    <div id="timeRemaining"></div>
-                </div>
-            </div>
+<div class="all">
+    <div class="timesaleBanner">
+        <img src="../timesale/pokemon_banner.png" alt="">
+        <div class="textBox">
+            <div class="bannerText">한정판 피규어 타임세일</div>
+            <div class="sale-date">03.20~03.29</div>
+            <div id="timeRemaining"></div>
         </div>
-    </a>
-    <div class="title">상품</div>
-    <div class="products" id="productContainer"></div>
+    </div>
+    <div class="bodyContainer">
+        <div class="title">상품</div>
+        <div class="products">
+            <!-- 상품 목록은 JavaScript로 동적으로 추가될 예정 -->
+        </div>
+    </div>
 </div>
 <script type="module" src="timesale.js"></script>
 </body>
