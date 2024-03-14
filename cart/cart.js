@@ -1,5 +1,6 @@
 let loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
 let cartsData = JSON.parse(localStorage.getItem('cartKey'));
+let allProduct = JSON.parse(localStorage.getItem('allProduct'));
 
 // Filter carts for the logged-in user
 let userCarts = cartsData.filter(cartItem => cartItem.user_id === loggedInUser.id);
@@ -53,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let cart = userCarts[i];
 
         // 주문한 제품의 정보 찾기
-        let product = productData.find(product => product.id === cart.product_id);
+        let product = allProduct.find(product => product.id === cart.product_id);
 
         // 주문 상품 테이블에 추가
         addCartTable("productBox", product.product_name, cart.cart_quantity, product.price * cart.cart_quantity);

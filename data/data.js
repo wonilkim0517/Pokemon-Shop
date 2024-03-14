@@ -20,10 +20,10 @@ const data = {
         },
         {
             id: 3,
-            password: "333",
-            user_name: "박영희",
-            nickname: "pyh",
-            email: "pyh@abc.com",
+            password: "admin",
+            user_name: "관리자",
+            nickname: "admin",
+            email: "admin@admin.com",
             address: "삼육대 3길",
             phone_num: "010-3333-3333"
         }
