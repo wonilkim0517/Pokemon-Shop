@@ -5,12 +5,22 @@
 html, body {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.all {
+.main2 {
     width: 100%;
-    text-align: center;
+}
+
+a {
+    text-decoration-line: none;
+    color: inherit;
+}
+
+.time_sale {
+    /*padding-top: 100px;*/
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
 }
 
 .timesaleBanner {
@@ -51,66 +61,38 @@ html, body {
     margin-top: 10px;
 }
 
-.bodyContainer {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
 .title {
-    margin-top: 200px;
+    margin-top: 20px;
+    margin-left: 40px;
     font-size: 30px;
 }
 
 .products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
+    margin-left: 20px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.products a {
+    margin-bottom: 40px;
 }
 
 .product {
-    width: 250px;
-    height: 350px;
-    margin: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
+    width: 280px;
+    height: 320px;
+    margin: 24px;
+    border: 1px solid black;
 }
 
-.product:hover {
-    transform: translateY(-5px);
-}
-
-.product img {
-    width: 100%;
-    height: 60%;
-    object-fit: cover;
-    border-bottom: 1px solid #ccc;
-}
-
-.product_info {
-    margin: 10px;
+/* 할인된 가격 스타일 */
+.discountedPrice {
+    font-size: 20px;
+    color: red; /* 할인 가격은 빨간색으로 표시 */
 }
 
 #timeRemaining {
+    font-weight: bold;
     font-size: 24px;
     margin-top: 10px;
-    font-weight: bold;
-}
-
-.product_price {
-    margin: 10px;
-}
-
-.original_price {
-    text-decoration: line-through;
-    color: #666; /* 취소선 색상 */
-}
-
-.discount_price {
-    color: red; /* 할인 가격 색상 */
-    font-weight: bold;
 }
