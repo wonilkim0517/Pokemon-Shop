@@ -10,7 +10,7 @@
 <body>
 <div class="container">
     <h1>상품 관리</h1>
-    <div class="detail">*전체 필수입력사항</div>
+    <div class="detail"></div>
     <hr/>
     <div class="inputContainer">
         <div id="signup-form">
@@ -29,6 +29,14 @@
             <span class="inputDetail">
                 <div class="text">할인 가격</div>
                 <input class="userInput" id="discount_price" name="discount_price" type="text" placeholder="할인 가격 입력">
+            </span>
+            <span class="inputDetail">
+                <div class="text">타임세일 시작 시간</div>
+                <input class="userInput" id="start_time" name="start_time" type="datetime-local" required>
+            </span>
+            <span class="inputDetail">
+                <div class="text">타임세일 종료 시간</div>
+                <input class="userInput" id="end_time" name="end_time" type="datetime-local" required>
             </span>
             <span class="inputDetail">
                 <div class="text">상세 설명</div>

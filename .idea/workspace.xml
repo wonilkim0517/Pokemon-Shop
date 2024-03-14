@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b7c4acb-b4d4-4152-9dc3-a8c4556612bd" name="Changes" comment="타임세일에서 동적으로 데이터 받고 받은 데이터로 타임세일 페이지에 상품 띄우는 코드 (디폴트 상품 이미지: defaultImg_pikachu.jpg)">
+    <list default="true" id="2b7c4acb-b4d4-4152-9dc3-a8c4556612bd" name="Changes" comment="할인 가격 표시 commit(제품 상세 페이지 제외)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/admin-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin-page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/data.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/product/product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/timesale/timesale.css" beforeDir="false" afterPath="$PROJECT_DIR$/timesale/timesale.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/timesale/timesale.html" beforeDir="false" afterPath="$PROJECT_DIR$/timesale/timesale.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/timesale/timesale.js" beforeDir="false" afterPath="$PROJECT_DIR$/timesale/timesale.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,27 +37,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "lys",
-    "ignore_missing_gitignore": "true",
-    "jdk.selected.JAVA_MODULE": "openjdk-21.0.1",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/rosco0611/workspace/jquery.countdown.package-2.1.0",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;lys&quot;,
+    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21.0.1&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/rosco0611/workspace/jquery.countdown.package-2.1.0&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\rosco0611\workspace\shopping\data" />
@@ -84,7 +86,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710247282292</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="할인 가격 표시 commit(제품 상세 페이지 제외)">
+      <option name="closed" value="true" />
+      <created>1710392837909</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710392837909</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +125,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="인텔리제이 연동 test" />
-    <option name="LAST_COMMIT_MESSAGE" value="인텔리제이 연동 test" />
+    <MESSAGE value="할인 가격 표시 commit(제품 상세 페이지 제외)" />
+    <option name="LAST_COMMIT_MESSAGE" value="할인 가격 표시 commit(제품 상세 페이지 제외)" />
   </component>
 </project>

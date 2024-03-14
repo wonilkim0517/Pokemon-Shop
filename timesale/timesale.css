@@ -100,3 +100,17 @@ html, body {
     margin-top: 10px;
     font-weight: bold;
 }
+
+.product_price {
+    margin: 10px;
+}
+
+.original_price {
+    text-decoration: line-through;
+    color: #666; /* 취소선 색상 */
+}
+
+.discount_price {
+    color: red; /* 할인 가격 색상 */
+    font-weight: bold;
+}

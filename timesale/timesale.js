@@ -5,8 +5,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     async function fetchProductData() {
         try {
             const allProducts = JSON.parse(localStorage.getItem('allProduct'));
-            // localStorage에 상품 데이터가 없을 경우 디폴트 상품 데이터 사용
-            console.log(allProducts);
             return allProducts || data.productData; // 로컬 스토리지에 상품 데이터가 없을 경우 기본 데이터 반환
         } catch (error) {
             console.error('상품 데이터를 가져오는 중 에러 발생:', error);
@@ -42,10 +40,21 @@ document.addEventListener("DOMContentLoaded", async function () {
                 nameElement.classList.add('product_info');
                 productElement.appendChild(nameElement);
 
-                const priceElement = document.createElement('p');
-                priceElement.textContent = `가격: ${product.price}원`;
-                priceElement.classList.add('product_info');
-                productElement.appendChild(priceElement);
+                const originalPrice = document.createElement('p');
+                // 할인 가격이 있는 경우 할인된 가격 표시
+                originalPrice.textContent = `${product.price}원`;
+                originalPrice.classList.add('product_info');
+                productElement.appendChild(originalPrice);
+
+                const discountPrice = document.createElement('p');
+                // 할인 가격이 있는 경우 할인된 가격 표시
+                discountPrice.textContent = `${product.discount_price}원`;
+                discountPrice.classList.add('product_info');
+                originalPrice.style.textDecoration = 'line-through';
+                productElement.appendChild(discountPrice);
+                discountPrice.style.color = 'red';
+                discountPrice.style.fontSize = '1.2em'; // 할인된 가격의 글꼴 크기를 강조
+                discountPrice.style.fontWeight = 'bold'; // 할인된 가격의 글꼴 굵기를 강조
 
                 // 상품 클릭 시 상세 페이지로 이동하는 이벤트 리스너 추가
                 productElement.addEventListener('click', function() {
@@ -60,27 +69,6 @@ document.addEventListener("DOMContentLoaded", async function () {
             }
         });
     }
-
-    // 타임 세일 마감까지의 시간 표시
-    const saleEndDate = new Date('2024-03-29T23:59:59'); // 타임 세일 종료일 설정
-    const timeRemainingElement = document.getElementById('timeRemaining');
-    function updateRemainingTime() {
-        const now = new Date();
-        const timeDiff = saleEndDate - now;
-
-        if (timeDiff <= 0) {
-            timeRemainingElement.textContent = "타임 세일 종료";
-        } else {
-            const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-
-            timeRemainingElement.textContent = `남은 시간: ${days}일 ${hours}시간 ${minutes}분 ${seconds}초`;
-        }
-    }
-    updateRemainingTime();
-    setInterval(updateRemainingTime, 1000); // 1초마다 남은 시간 업데이트
 
     // 상품 표시 함수 호출
     displayProducts();
