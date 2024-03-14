@@ -25,24 +25,24 @@
                 </div>
             </span>
         <span class="product_name">
-                <h2 id="product_title"></h2><hr style="border: 2px solid gray">
+                <h2 id="product_title" style="text-align: left"></h2><hr style="border: 2px solid gray">
                 <table style="margin-top: 20px">
                     <tr>
-                        <td style="width: 300px">판매가</td>
+                        <td style="width: 300px; text-align: left">판매가</td>
                         <td id="price"></td>
                     </tr>
                     <tr>
-                        <td>상품코드</td>
+                        <td style="text-align: left">상품코드</td>
                         <td id="product_id"></td>  <!-- 상품 아이디 입력 -->
                     </tr>
                     <tr>
-                        <td>제조사 / 공급사</td>
+                        <td style="text-align: left">제조사 / 공급사</td>
                         <td>Nintendo / @Pokemon</td>  <!-- 제조사 입력 (데이터베이스 존재 시) -->
                     </tr>
                     <tr>
-                        <td>수량</td>
+                        <td style="text-align: left">수량</td>
                         <td>
-                            <table class="quantity">
+                            <table class="quantity" style="margin-left: auto; margin-right: auto">
                                 <tr>
                                     <td><button class="minus">-</button></td>
                                     <td><span id="result">1</span></td>
@@ -52,8 +52,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>옵션 선택</td>
-                        <td style="vertical-align: middle;">
+                        <td style="text-align: left">옵션 선택</td>
+                        <td style="vertical-align: middle; text-align: center">
                             <select class="options" name="options">
                                 <option value="0">== 선택 ==</option>
                                 <option value="1">옵션 1</option>
@@ -68,7 +68,7 @@
                 <div style="margin-top: 50px">
                     <table style="font-size: 30px; font-weight: bold">
                         <tr>
-                            <td style="width: 200px">결제 금액</td>
+                            <td style="width: 200px; text-align: left">결제 금액</td>
                             <td id="final_price" style="text-align: right"></td>
                         </tr>
                     </table>
