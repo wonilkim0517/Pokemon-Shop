@@ -55,21 +55,18 @@ const mini2 = () => {
 const cart = () => {
     // 로그인 상태 확인
     if (!loggedInUser) {
-        // 로그인되어 있지 않으면 로그인 페이지로 이동
-        alert("로그인이 필요합니다.")
-        window.location.href = "../login/login-page.html";
+        // 로그인되어 있지 않으면 알람 표시
+        alert("로그인이 필요합니다.");
         return;
     }
     document.getElementById("contentFrame").setAttribute("src", "../cart/cart.html");
 }
 
 const myPage = () => {
-    // 로그인 상태 확인
     if (!loggedInUser) {
-        // 로그인되어 있지 않으면 로그인 페이지로 이동
-        alert("로그인이 필요합니다.")
-        window.location.href = "../login/login-page.html";
-        return;
+        // 로그인되어 있지 않으면 알람 표시
+        alert("로그인이 필요합니다.");
+        return
     }
     document.getElementById("contentFrame").setAttribute("src", "../mypage/mypage.html");
 }
