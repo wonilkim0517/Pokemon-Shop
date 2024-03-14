@@ -5,6 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b7c4acb-b4d4-4152-9dc3-a8c4556612bd" name="Changes" comment="타임세일에서 동적으로 데이터 받고 받은 데이터로 타임세일 페이지에 상품 띄우는 코드 (디폴트 상품 이미지: defaultImg_pikachu.jpg)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/product/product.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/timesale/timesale.js" beforeDir="false" afterPath="$PROJECT_DIR$/timesale/timesale.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +40,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "lys",
     "ignore_missing_gitignore": "true",
     "jdk.selected.JAVA_MODULE": "openjdk-21.0.1",
     "kotlin-language-version-configured": "true",
