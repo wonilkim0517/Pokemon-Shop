@@ -35,6 +35,7 @@ const login = () => {
             window.parent.location.reload();
             window.location.href = "../main/home.html";
         }
+        loginSuccessRedirect();
     }
     else {
         // 로그인 실패
