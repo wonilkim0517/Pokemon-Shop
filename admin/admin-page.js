@@ -27,10 +27,18 @@ const goods_stock = () => {
     var stock = document.getElementById("stock").value;
     var price = document.getElementById("price").value;
     var content = document.getElementById("content").value;
-    var discount_price = document.getElementById("discount_price").value;
+    var discount_price_input = document.getElementById("discount_price"); // 할인 가격 입력 요소 가져오기
+    var discount_price = discount_price_input ? discount_price_input.value : ''; // 할인 가격이 입력되지 않은 경우를 고려하여 값 가져오기
+
+    // 추가로 타임세일 시작 시간과 종료 시간 요소를 가져오도록 수정
+    var start_time_input = document.getElementById("start_time");
+    var start_time = start_time_input ? start_time_input.value : '';
+
+    var end_time_input = document.getElementById("end_time");
+    var end_time = end_time_input ? end_time_input.value : '';
 
     // 사용자 이름, 이메일, 비밀번호 모두 입력되었는지 확인
-    if (product_name.trim() === '' || stock.trim() === '' || price.trim() === '' || content.trim() === '' || discount_price.trim() === '') {
+    if (product_name.trim() === '' || stock.trim() === '' || price.trim() === '' || content.trim() === '' || discount_price.trim() === '' || start_time.trim() === '' || end_time.trim() === '') {
         alert("필수 입력 필드를 작성해주세요.");
         return; // 필수 입력 필드가 비어있을 경우 함수 종료
     } else if (product_name.trim() !== '') {
@@ -49,7 +57,9 @@ const goods_stock = () => {
         "stock": stock,
         "price": price,
         "content": content,
-        "discount_price": discount_price
+        "discount_price": discount_price,
+        "start_time": start_time, // 타임세일 시작 시간 추가
+        "end_time": end_time // 타임세일 종료 시간 추가
     };
 
     allProducts.push(newProduct);
