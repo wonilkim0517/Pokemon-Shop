@@ -54,6 +54,7 @@ function cartToOrderDetail() {
         let cart = userCarts[i];
         let newOrderDetail = {
             "id": orderDetailData.length + 1,
+            "user_id": loggedInUser.id,
             "order_id": cart.order_id,
             "product_id": cart.product_id,
             "orderDetail_quantity": cart.cart_quantity

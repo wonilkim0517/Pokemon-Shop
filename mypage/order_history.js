@@ -34,7 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
     orderDetailData.forEach((orderDetail, index) => {
         let product = allProduct.find(product => product.id === orderDetail.product_id);
         if (orderDetail.orderDetail_quantity > 0) {
-            addOrderRow(index + 1, product.product_name, orderDetail.orderDetail_quantity, product.price * orderDetail.orderDetail_quantity);
+            if(orderDetail.user_id === loggedInUser.id) {
+                addOrderRow(index + 1, product.product_name, orderDetail.orderDetail_quantity, product.price * orderDetail.orderDetail_quantity);
+            }
         }
     });
 
