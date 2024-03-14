@@ -1,3 +1,4 @@
+const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
 document.addEventListener("DOMContentLoaded", function () {
     // 체크할 키와 값을 설정합니다.
     const keyToCheck = "allUser";
@@ -52,10 +53,24 @@ const mini2 = () => {
     }
 }
 const cart = () => {
+    // 로그인 상태 확인
+    if (!loggedInUser) {
+        // 로그인되어 있지 않으면 로그인 페이지로 이동
+        alert("로그인이 필요합니다.")
+        window.location.href = "../login/login-page.html";
+        return;
+    }
     document.getElementById("contentFrame").setAttribute("src", "../cart/cart.html");
 }
 
 const myPage = () => {
+    // 로그인 상태 확인
+    if (!loggedInUser) {
+        // 로그인되어 있지 않으면 로그인 페이지로 이동
+        alert("로그인이 필요합니다.")
+        window.location.href = "../login/login-page.html";
+        return;
+    }
     document.getElementById("contentFrame").setAttribute("src", "../mypage/mypage.html");
 }
 
