@@ -41,6 +41,15 @@ function addProducts() {
         productPrice.className = 'product_info';
         productPrice.textContent = product.price;
 
+        // 클릭 이벤트 리스너를 추가하여 클릭 시 선택한 제품을 로그로 남깁니다.
+        productLink.addEventListener('click', function () {
+            let selectedProductName = product.product_name;
+            let selectProduct = allProduct.find(product => product.product_name === selectedProductName);
+
+            // 나중에 사용을 위해 선택한 제품을 로컬 스토리지에 저장합니다.
+            localStorage.setItem('selectedProduct', JSON.stringify(selectProduct));
+        });
+
         productLink.appendChild(productImage);
         productLink.appendChild(document.createElement('br'));
         productLink.appendChild(productName);
