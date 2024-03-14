@@ -5,25 +5,40 @@ let cartData = JSON.parse(localStorage.getItem('cartKey'));
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('product_title').innerText = selectedProduct.product_name;
 
-    // 할인된 가격이 있는 경우 해당 가격을 표시하고 아닌 경우 원래 가격 표시
-    const productPrice = document.getElementById('price');
-    if (selectedProduct.discount_price !== undefined) {
-        const originalPrice = document.createElement('p');
-        originalPrice.textContent = `${selectedProduct.price}원 `;
-        originalPrice.style.textDecoration = 'line-through';
+    // 할인 기간 내에 있는지 확인
+    if (selectedProduct.start_time && selectedProduct.end_time) {
+        var discountStart = new Date(selectedProduct.start_time);
+        var discountEnd = new Date(selectedProduct.end_time);
+        var currentDate = new Date(); // 현재 시간 가져오기
 
-        productPrice.appendChild(originalPrice);
+        if (currentDate >= discountStart && currentDate <= discountEnd) {
+            // 할인된 가격이 있는 경우에만 해당 가격을 표시합니다.
+            const productPrice = document.getElementById('price');
+            if (selectedProduct.discount_price !== undefined) {
+                const originalPrice = document.createElement('p');
+                originalPrice.textContent = `${selectedProduct.price.toLocaleString()}원 `;
+                originalPrice.style.textDecoration = 'line-through';
 
-        const discountPrice = document.createElement('p');
-        discountPrice.textContent = `할인가: ${selectedProduct.discount_price}원`;
-        discountPrice.style.color = 'red';
-        discountPrice.style.fontSize = '1.2em'; // 할인된 가격의 글꼴 크기를 강조
-        discountPrice.style.fontWeight = 'bold'; // 할인된 가격의 글꼴 굵기를 강조
+                productPrice.appendChild(originalPrice);
 
-        productPrice.appendChild(discountPrice);
+                const discountPrice = document.createElement('p');
+                discountPrice.textContent = `할인가: ${selectedProduct.discount_price.toLocaleString()}원`;
+                discountPrice.style.color = 'red';
+                discountPrice.style.fontSize = '1.2em'; // 할인된 가격의 글꼴 크기를 강조
+                discountPrice.style.fontWeight = 'bold'; // 할인된 가격의 글꼴 굵기를 강조
+
+                productPrice.appendChild(discountPrice);
+            } else {
+                // 할인 가격이 설정되지 않은 경우에는 원래 가격만 표시합니다.
+                productPrice.textContent = `가격: ${selectedProduct.price.toLocaleString()}원`;
+            }
+        } else {
+            // 할인 기간이 지난 경우에는 원래 가격만 표시합니다.
+            document.getElementById('price').textContent = `가격: ${selectedProduct.price.toLocaleString()}원`;
+        }
     } else {
-        // 할인 가격이 설정되지 않은 경우에는 원래 가격만 표시합니다.
-        productPrice.textContent = `가격: ${selectedProduct.price}원`;
+        // 할인 기간이 설정되지 않은 경우에는 원래 가격만 표시합니다.
+        document.getElementById('price').textContent = `가격: ${selectedProduct.price.toLocaleString()}원`;
     }
 
     document.getElementById('product_id').innerText = selectedProduct.id;
@@ -77,6 +92,16 @@ document.querySelector('.minus').addEventListener('click', function (event) {
         updatePrice();
     }
 });
+
+function updatePrice() {
+    let quantity = parseInt(document.getElementById("result").textContent);
+    let price = selectedProduct.discount_price !== undefined ? selectedProduct.discount_price : selectedProduct.price;
+    let totalPrice = quantity * price;
+    document.getElementById("final_price").textContent = totalPrice.toLocaleString() + "원";
+
+    // 결제 금액을 로컬 스토리지에 저장
+    localStorage.setItem('selectedProductPrice', totalPrice);
+}
 
 // + 누르면 수량 증가
 document.querySelector('.plus').addEventListener('click', function (event) {

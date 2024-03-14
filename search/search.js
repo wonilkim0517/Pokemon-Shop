@@ -33,13 +33,36 @@ function addProducts() {
         productImage.alt = '';
         productImage.className = 'product';
 
+        // 이미지 로드 실패 시 대체 이미지로 설정
+        productImage.onerror = function () {
+            this.src = '../data/fail_Img.png';
+        };
+
         var productName = document.createElement('p');
         productName.className = 'product_info';
         productName.textContent = product.product_name;
 
         var productPrice = document.createElement('p');
         productPrice.className = 'product_info';
-        productPrice.textContent = product.price;
+
+        // 할인 가격이 있는 경우 할인 가격을 표시하고, 그렇지 않은 경우 원래 가격을 표시합니다.
+        if (product.discount_price !== undefined) {
+            const originalPrice = document.createElement('p');
+            originalPrice.textContent = `${product.price.toLocaleString()}원 `;
+            originalPrice.style.textDecoration = 'line-through';
+
+            productPrice.appendChild(originalPrice);
+
+            const discountPrice = document.createElement('p');
+            discountPrice.textContent = `할인가: ${product.discount_price.toLocaleString()}원`;
+            discountPrice.style.color = 'red';
+            discountPrice.style.fontSize = '1.2em'; // 할인된 가격의 글꼴 크기를 강조
+            discountPrice.style.fontWeight = 'bold'; // 할인된 가격의 글꼴 굵기를 강조
+
+            productPrice.appendChild(discountPrice);
+        } else {
+            productPrice.textContent = `가격: ${product.price.toLocaleString()}원`;
+        }
 
         // 클릭 이벤트 리스너를 추가하여 클릭 시 선택한 제품을 로그로 남깁니다.
         productLink.addEventListener('click', function () {
