@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>order_history</title>
     <link rel="stylesheet" href="order_history.css">
+    <script src="order_history.js"></script>
 </head>
 <body>
 <div class="all">
@@ -19,36 +20,10 @@
                 </tr>
                 <!-- 상품 추가 시 동적 생성 -> 상품 추가 시 21 ~ 34행 추가 -->
                 <tr>
-                    <th style="border-right: 2px solid gray">1</th>
-                    <td colspan="2" style="border-right: 2px solid gray">
                         <table class="order_product_detail" style="margin-left: 15px; margin-right: 15px; border-collapse: collapse">
-                            <tr>
-                                <!-- 주문한 상품이 한가지 -->
-                                <!-- 마지막 상품에는 border-bottom 존재 X -->
-                                <td style="width: 770px; padding-left: 10px; border-bottom: none">상품 1</td> <!-- 상품명 -->
-                                <td style="width: 90px; text-align: center; border-bottom: none">1</td> <!-- 수량 -->
-                            </tr>
+
                         </table>
-                    </td>
-                    <td style="text-align: center">- 원</td> <!-- 총 금액 -->
-                </tr>
-                <tr>
-                    <th style="border-right: 2px solid gray">2</th>
-                    <td colspan="2" style="border-right: 2px solid gray">
-                        <table class="order_product_detail" style="margin-left: 15px; margin-right: 15px; border-collapse: collapse">
-                            <tr>
-                                <!-- 주문한 상품이 두가지 이상 -->
-                                <!-- 마지막 상품에는 border-bottom 존재 X -->
-                                <td style="width: 770px; padding-left: 10px">상품 1</td>  <!-- 상품명 -->
-                                <td style="width: 90px; text-align: center">1</td>  <!-- 수량 -->
-                            </tr>
-                            <tr>
-                                <td style="padding-left: 10px; border-bottom: none">상품 2</td>   <!-- 상품명 -->
-                                <td style="text-align: center; border-bottom: none">2</td>  <!-- 수량 -->
-                            </tr>
-                        </table>
-                    </td>
-                    <td style="text-align: center">- 원</td> <!-- 총 금액 -->
+                    <td style="text-align: center"></td> <!-- 총 금액 -->
                 </tr>
             </table>
         </div>

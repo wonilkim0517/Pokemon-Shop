@@ -31,35 +31,48 @@ const data = {
     productData: [
         {
             id: 101,
-            product_name: "포켓몬 꽃",
+            product_name: "포켓몬센터 한 송이 꽃병 MIMOSA e POKÉMON 피카츄",
             stock: 50,
             price: 10000,
-            discount_price: 99,
-            start_timesale: "0000-00-00 00:00",
-            end_timesale: "0000-00-00 00:00",
-            content: "설명1",
+            content: "피카츄 꽃꽂이",
             image: "main-img/pokemon_one_flower_01.png"
         },
         {
             id: 102,
-            product_name: "포켓몬 땅",
+            product_name: "포켓몬센터 한 송이 꽃병 Fleur de Coquelicot 이브이",
             stock: 50,
             price: 20000,
-            content: "설명2",
-            image: "main-img/pokemon_earth_digda.png"
+            content: "이브이 꽃꽂이",
+            image: "main-img/pokemon_flower_Eevee_01.png"
         },
         {
             id: 103,
-            product_name: "포켓몬 물",
+            product_name: "포켓몬센터 한 송이 꽃병 Baby Blue Eyes 팽도리",
             stock: 50,
             price: 30000,
-            content: "",
-            image: "main-img/pokemon_water_kkobugi.png"
+            content: "팽도리 꽃꽂이",
+            image: "main-img/pokemon_flower_piplup_01.png"
+        },
+        {
+            id: 104,
+            product_name: "포켓몬센터 보들보들 봉제인형 메타몽",
+            stock: 50,
+            price: 40000,
+            content: "메타몽 인형",
+            image: "main-img/pokemon_d_metamon_01.png"
+        },
+        {
+            id: 105,
+            product_name: "포켓몬스터 MOFUGUTTO BIG 봉제인형 마자용",
+            stock: 50,
+            price: 50000,
+            content: "마자용 인형",
+            image: "main-img/pokemon_d_majayong_01.png"
         }
     ],
     orderDetailData: [
         {
-            id: 1,
+            id: 0,
             order_id: 1,
             product_id: 101,
             orderDetail_quantity: 0
@@ -78,7 +91,7 @@ const data = {
     cartData: [
         {
             id: 1,
-            user_id: 5,
+            user_id: 1000,
             product_id: 101,
             cart_quantity: 0,
             is_ordered: 0
