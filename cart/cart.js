@@ -5,8 +5,6 @@ let allProduct = JSON.parse(localStorage.getItem('allProduct'));
 // Filter carts for the logged-in user
 let userCarts = cartsData.filter(cartItem => cartItem.user_id === loggedInUser.id);
 
-
-
 // 새로운 상품을 장바구니에 추가
 document.addEventListener("DOMContentLoaded", function () {
     let totalOrderPrice = 0;
@@ -38,8 +36,28 @@ document.addEventListener("DOMContentLoaded", function () {
         // 주문한 제품의 정보 찾기
         let product = allProduct.find(product => product.id === cart.product_id);
 
-        // 주문 상품 테이블에 추가
-        addCartTable("productBox", product.product_name, cart.cart_quantity, product.price * cart.cart_quantity);
+        // 할인 기간 내에 있는지 확인
+        if (product.start_time && product.end_time) {
+            let discountStart = new Date(product.start_time);
+            let discountEnd = new Date(product.end_time);
+            let currentDate = new Date();
+
+            if (currentDate >= discountStart && currentDate <= discountEnd) {
+                // 할인된 가격이 있는 경우에만 해당 가격으로 계산합니다.
+                if (product.discount_price !== undefined) {
+                    addCartTable("productBox", product.product_name, cart.cart_quantity, product.discount_price * cart.cart_quantity);
+                } else {
+                    // 할인 가격이 설정되지 않은 경우에는 원래 가격으로 계산합니다.
+                    addCartTable("productBox", product.product_name, cart.cart_quantity, product.price * cart.cart_quantity);
+                }
+            } else {
+                // 할인 기간이 지난 경우에는 원래 가격으로 계산합니다.
+                addCartTable("productBox", product.product_name, cart.cart_quantity, product.price * cart.cart_quantity);
+            }
+        } else {
+            // 할인 기간이 설정되지 않은 경우에는 원래 가격으로 계산합니다.
+            addCartTable("productBox", product.product_name, cart.cart_quantity, product.price * cart.cart_quantity);
+        }
 
         // 로컬 스토리지에 상품 정보 저장
         let cartKey = 'cartKey' + cart.id;
@@ -59,8 +77,3 @@ document.addEventListener("DOMContentLoaded", function () {
     // 페이지가 로드되면 사용자의 주소를 화면에 표시합니다.
     displayUserAddress();
 });
-
-console.log(userCarts);
-// document.addEventListener('DOMContentLoaded', function() {
-//
-// });

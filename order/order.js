@@ -3,8 +3,6 @@ let cartsData = JSON.parse(localStorage.getItem('cartKey'));
 let userCarts = cartsData.filter(cartItem => cartItem.user_id === loggedInUser.id);
 let allProduct = JSON.parse(localStorage.getItem('allProduct'));
 
-console.log(cartsData);
-
 // DOMContentLoaded 이벤트 발생 시 실행할 함수
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -67,5 +65,4 @@ function cartToOrderDetail() {
 
     // 주문 완료 페이지로 이동
     location.href='order_finish.html';
-    console.log(orderDetailData)
 }
