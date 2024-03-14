@@ -84,3 +84,10 @@ function updateLoginStatus() {
         document.getElementById("mini2").innerText = '로그인';
     }
 }
+
+// 로그인 시 상단 바에 이름 표시
+document.addEventListener('DOMContentLoaded', function () {
+    let loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+    let userInfoSpaces = document.getElementsByClassName("userInfoSpace")
+    userInfoSpaces[0].innerText = loggedInUser.user_name
+})
