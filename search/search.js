@@ -1,4 +1,4 @@
-let allProduct = JSON.parse(localStorage.getItem(('allProduct')));
+let allProduct = JSON.parse(localStorage.getItem('allProduct'));
 
 function addProducts() {
     // localStorage에서 검색어를 가져옵니다.
@@ -45,22 +45,38 @@ function addProducts() {
         var productPrice = document.createElement('p');
         productPrice.className = 'product_info';
 
-        // 할인 가격이 있는 경우 할인 가격을 표시하고, 그렇지 않은 경우 원래 가격을 표시합니다.
-        if (product.discount_price !== undefined) {
-            const originalPrice = document.createElement('p');
-            originalPrice.textContent = `${product.price.toLocaleString()}원 `;
-            originalPrice.style.textDecoration = 'line-through';
+        // 할인 기간 내에 있는지 확인
+        if (product.start_time && product.end_time) {
+            var discountStart = new Date(product.start_time);
+            var discountEnd = new Date(product.end_time);
+            var currentDate = new Date(); // 현재 시간 가져오기
 
-            productPrice.appendChild(originalPrice);
+            if (currentDate >= discountStart && currentDate <= discountEnd) {
+                // 할인된 가격이 있는 경우에만 해당 가격을 표시합니다.
+                if (product.discount_price !== undefined) {
+                    var originalPrice = document.createElement('p');
+                    originalPrice.textContent = `${product.price.toLocaleString()}원 `;
+                    originalPrice.style.textDecoration = 'line-through';
 
-            const discountPrice = document.createElement('p');
-            discountPrice.textContent = `할인가: ${product.discount_price.toLocaleString()}원`;
-            discountPrice.style.color = 'red';
-            discountPrice.style.fontSize = '1.2em'; // 할인된 가격의 글꼴 크기를 강조
-            discountPrice.style.fontWeight = 'bold'; // 할인된 가격의 글꼴 굵기를 강조
+                    productPrice.appendChild(originalPrice);
 
-            productPrice.appendChild(discountPrice);
+                    var discountPrice = document.createElement('p');
+                    discountPrice.textContent = `할인가: ${product.discount_price.toLocaleString()}원`;
+                    discountPrice.style.color = 'red';
+                    discountPrice.style.fontSize = '1.2em'; // 할인된 가격의 글꼴 크기를 강조
+                    discountPrice.style.fontWeight = 'bold'; // 할인된 가격의 글꼴 굵기를 강조
+
+                    productPrice.appendChild(discountPrice);
+                } else {
+                    // 할인 가격이 설정되지 않은 경우에는 원래 가격만 표시합니다.
+                    productPrice.textContent = `가격: ${product.price.toLocaleString()}원`;
+                }
+            } else {
+                // 할인 기간이 지난 경우에는 원래 가격만 표시합니다.
+                productPrice.textContent = `가격: ${product.price.toLocaleString()}원`;
+            }
         } else {
+            // 할인 기간이 설정되지 않은 경우에는 원래 가격만 표시합니다.
             productPrice.textContent = `가격: ${product.price.toLocaleString()}원`;
         }
 
