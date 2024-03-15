@@ -37,8 +37,28 @@ document.addEventListener("DOMContentLoaded", function () {
         // 주문한 제품의 정보 찾기
         let product = allProduct.find(product => product.id === cart.product_id);
 
-        // 주문 상품 테이블에 추가
-        addOrderTable("order_product", product.product_name, cart.cart_quantity, product.price * cart.cart_quantity);
+        // 할인 기간 내에 있는지 확인
+        if (product.start_time && product.end_time) {
+            let discountStart = new Date(product.start_time);
+            let discountEnd = new Date(product.end_time);
+            let currentDate = new Date();
+
+            if (currentDate >= discountStart && currentDate <= discountEnd) {
+                // 할인된 가격이 있는 경우에만 해당 가격으로 계산합니다.
+                if (product.discount_price !== undefined) {
+                    addOrderTable("order_product", product.product_name, cart.cart_quantity, product.discount_price * cart.cart_quantity);
+                } else {
+                    // 할인 가격이 설정되지 않은 경우에는 원래 가격으로 계산합니다.
+                    addOrderTable("order_product", product.product_name, cart.cart_quantity, product.price * cart.cart_quantity);
+                }
+            } else {
+                // 할인 기간이 지난 경우에는 원래 가격으로 계산합니다.
+                addOrderTable("order_product", product.product_name, cart.cart_quantity, product.price * cart.cart_quantity);
+            }
+        } else {
+            // 할인 기간이 설정되지 않은 경우에는 원래 가격으로 계산합니다.
+            addOrderTable("order_product", product.product_name, cart.cart_quantity, product.price * cart.cart_quantity);
+        }
     }
     document.getElementById('orderDetail_total_price').textContent = totalOrderPrice + "원";
 });
