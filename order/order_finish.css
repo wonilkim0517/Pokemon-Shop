@@ -8,6 +8,10 @@ h2 {
     margin-left: 94px;
 }
 
+.order_finish_product {
+    text-align: center;
+}
+
 table {
     border: 1px solid gray;
     border-left: none;
