@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b7c4acb-b4d4-4152-9dc3-a8c4556612bd" name="Changes" comment="최종완성 commit">
+    <list default="true" id="2b7c4acb-b4d4-4152-9dc3-a8c4556612bd" name="Changes" comment="모든 화면에서 할인된 가격 표시되게 수정, 장바구니에서 할인된 가격 적용 불가 오류 수정 등 상품 상세 페이지 사진 오류 제외 모든 오류 수정">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/cart/cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/order/order.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/product/product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/search/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/data.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +19,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="lys" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,27 +54,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;lys&quot;,
-    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21.0.1&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/rosco0611/workspace/jquery.countdown.package-2.1.0&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore_missing_gitignore": "true",
+    "jdk.selected.JAVA_MODULE": "openjdk-21.0.1",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/rosco0611/workspace/jquery.countdown.package-2.1.0",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\rosco0611\workspace\shopping\data" />
@@ -99,6 +96,7 @@
       <workItem from="1710322345097" duration="5349000" />
       <workItem from="1710409750191" duration="1380000" />
       <workItem from="1710417898963" duration="5133000" />
+      <workItem from="1710461478349" duration="1192000" />
     </task>
     <task id="LOCAL-00001" summary="인텔리제이 연동 test">
       <option name="closed" value="true" />
@@ -140,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710420549823</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="모든 화면에서 할인된 가격 표시되게 수정, 장바구니에서 할인된 가격 적용 불가 오류 수정 등 상품 상세 페이지 사진 오류 제외 모든 오류 수정">
+      <option name="closed" value="true" />
+      <created>1710434941512</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710434941512</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +181,8 @@
     <MESSAGE value="중간 commit" />
     <MESSAGE value="타임세일 최최종완성 commit" />
     <MESSAGE value="최종완성 commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="최종완성 commit" />
+    <MESSAGE value="모든 화면에서 할인된 가격 표시되게 수정, 장바구니에서 할인된 가격 적용 불가 오류 수정" />
+    <MESSAGE value="모든 화면에서 할인된 가격 표시되게 수정, 장바구니에서 할인된 가격 적용 불가 오류 수정 등 상품 상세 페이지 사진 오류 제외 모든 오류 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="모든 화면에서 할인된 가격 표시되게 수정, 장바구니에서 할인된 가격 적용 불가 오류 수정 등 상품 상세 페이지 사진 오류 제외 모든 오류 수정" />
   </component>
 </project>

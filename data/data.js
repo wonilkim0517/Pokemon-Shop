@@ -31,7 +31,7 @@ const data = {
     productData: [
         {
             id: 101,
-            product_name: "포켓몬센터 한 송이 꽃병 MIMOSA e POKÉMON 피카츄",
+            product_name: "포켓몬센터 MIMOSA e POKÉMON 피카츄",
             stock: 50,
             price: 10000,
             content: "피카츄 꽃꽂이",
@@ -39,7 +39,7 @@ const data = {
         },
         {
             id: 102,
-            product_name: "포켓몬센터 한 송이 꽃병 Fleur de Coquelicot 이브이",
+            product_name: "포켓몬센터 Fleur de Coquelicot 이브이",
             stock: 50,
             price: 20000,
             content: "이브이 꽃꽂이",
@@ -47,7 +47,7 @@ const data = {
         },
         {
             id: 103,
-            product_name: "포켓몬센터 한 송이 꽃병 Baby Blue Eyes 팽도리",
+            product_name: "포켓몬센터 Baby Blue Eyes 팽도리",
             stock: 50,
             price: 30000,
             content: "팽도리 꽃꽂이",
