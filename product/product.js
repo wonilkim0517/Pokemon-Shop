@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 이미지 요소 설정
     const mainImage = document.getElementById('default_img');
+    document.getElementById('main_img').src = "../main/" +selectedProduct.image;
     if (selectedProduct && selectedProduct.image) {
         mainImage.src = "../main/" + selectedProduct.image;
 
@@ -60,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const newImageUrl = "../main/" + selectedProduct.image.replace(/\d+\.png/, newSrc);
                 imgElement.onerror = function () {
                     console.log("이미지 로드 실패:", this.src);
-                    this.src = '../data/fail_Img.png'; // 대체 이미지로 설정
+                    this.style.display = "none"; // 이미지를 숨깁니다.
                 };
                 imgElement.src = newImageUrl;
             }
@@ -68,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const newImageUrl2 = "../main/" + selectedProduct.image.replace(/\d+\.png/, newSrc);
                 detailImgElement.onerror = function () {
                     console.log("이미지 로드 실패:", this.src);
-                    this.src = '../data/fail_Img.png'; // 대체 이미지로 설정
+                    this.style.display = "none"; // 이미지를 숨깁니다.
                 };
                 detailImgElement.src = newImageUrl2;
             }
