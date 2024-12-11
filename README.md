@@ -1,3 +1,4 @@
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/acbc8640-3bcd-4fa7-8ba9-2da4ff4cf58d/2b45c81f-cd65-45d8-a345-9d429ec9d105/image.png)
+<img width="1705" alt="image" src="https://github.com/user-attachments/assets/bb9b4bf7-0476-463e-a406-543af60d5dfc">
+
 
 <h3 align="middle">포켓몬 쇼핑몰</h3>
