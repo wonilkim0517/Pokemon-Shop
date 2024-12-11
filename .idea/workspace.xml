@@ -4,51 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b7c4acb-b4d4-4152-9dc3-a8c4556612bd" name="Changes" comment="모든 화면에서 할인된 가격 표시되게 수정, 장바구니에서 할인된 가격 적용 불가 오류 수정 등 상품 상세 페이지 사진 오류 제외 모든 오류 수정">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/data.js" afterDir="false" />
-    </list>
+    <list default="true" id="2b7c4acb-b4d4-4152-9dc3-a8c4556612bd" name="Changes" comment="모든 화면에서 할인된 가격 표시되게 수정, 장바구니에서 할인된 가격 적용 불가 오류 수정 등 상품 상세 페이지 사진 오류 제외 모든 오류 수정" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="master" />
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="lys" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;lys0611&quot;
+    &quot;assignee&quot;: &quot;wonilkim0517&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="recentNewPullRequestHead">
-      <RepoCoordinatesHolder>
-        <option name="owner" value="jiyunggg" />
-        <option name="repository" value="shop" />
-      </RepoCoordinatesHolder>
-    </option>
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="42ebb1a5-9faa-4ea0-a815-cad940048d7f" />
-        <option name="url" value="https://github.com/jiyunggg/shop.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:wonilkim0517/Pokemon-Shop.git&quot;,
+    &quot;accountId&quot;: &quot;04682c3b-c1da-4f27-a9fd-b04e372136bf&quot;
+  }
 }</component>
-  <component name="ProjectId" id="2daXHRXaSfIBuHlHxbxdYi9NSyg" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2q3mglNEEYGKgmsWoCPYytlroMx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -56,97 +41,49 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
-    "ignore_missing_gitignore": "true",
-    "jdk.selected.JAVA_MODULE": "openjdk-21.0.1",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/rosco0611/workspace/jquery.countdown.package-2.1.0",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\rosco0611\workspace\shopping\data" />
-      <recent name="C:\Users\rosco0611\workspace\shop\timesale" />
-    </key>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.145" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2b7c4acb-b4d4-4152-9dc3-a8c4556612bd" name="Changes" comment="" />
-      <created>1710247074957</created>
+      <changelist id="2b7c4acb-b4d4-4152-9dc3-a8c4556612bd" name="Changes" comment="모든 화면에서 할인된 가격 표시되게 수정, 장바구니에서 할인된 가격 적용 불가 오류 수정 등 상품 상세 페이지 사진 오류 제외 모든 오류 수정" />
+      <created>1733899746686</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1710247074957</updated>
-      <workItem from="1710247075982" duration="862000" />
-      <workItem from="1710252987008" duration="2150000" />
-      <workItem from="1710257203338" duration="6159000" />
-      <workItem from="1710321764756" duration="574000" />
-      <workItem from="1710322345097" duration="5349000" />
-      <workItem from="1710409750191" duration="1380000" />
-      <workItem from="1710417898963" duration="5133000" />
-      <workItem from="1710461478349" duration="1192000" />
+      <updated>1733899746686</updated>
+      <workItem from="1733899747723" duration="271000" />
+      <workItem from="1733900020012" duration="399000" />
     </task>
-    <task id="LOCAL-00001" summary="인텔리제이 연동 test">
-      <option name="closed" value="true" />
-      <created>1710247282292</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1710247282292</updated>
-    </task>
-    <task id="LOCAL-00002" summary="할인 가격 표시 commit(제품 상세 페이지 제외)">
-      <option name="closed" value="true" />
-      <created>1710392837909</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1710392837909</updated>
-    </task>
-    <task id="LOCAL-00003" summary="중간 commit">
-      <option name="closed" value="true" />
-      <created>1710399693611</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1710399693611</updated>
-    </task>
-    <task id="LOCAL-00004" summary="타임세일 최최종완성 commit">
-      <option name="closed" value="true" />
-      <created>1710411819037</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1710411819037</updated>
-    </task>
-    <task id="LOCAL-00005" summary="최종완성 commit">
-      <option name="closed" value="true" />
-      <created>1710420549823</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1710420549823</updated>
-    </task>
-    <task id="LOCAL-00006" summary="모든 화면에서 할인된 가격 표시되게 수정, 장바구니에서 할인된 가격 적용 불가 오류 수정 등 상품 상세 페이지 사진 오류 제외 모든 오류 수정">
-      <option name="closed" value="true" />
-      <created>1710434941512</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1710434941512</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,7 +100,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="lys" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -174,15 +111,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="인텔리제이 연동 test" />
-    <MESSAGE value="할인 가격 표시 commit(제품 상세 페이지 제외)" />
-    <MESSAGE value="중간 commit" />
-    <MESSAGE value="타임세일 최최종완성 commit" />
-    <MESSAGE value="최종완성 commit" />
-    <MESSAGE value="모든 화면에서 할인된 가격 표시되게 수정, 장바구니에서 할인된 가격 적용 불가 오류 수정" />
-    <MESSAGE value="모든 화면에서 할인된 가격 표시되게 수정, 장바구니에서 할인된 가격 적용 불가 오류 수정 등 상품 상세 페이지 사진 오류 제외 모든 오류 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="모든 화면에서 할인된 가격 표시되게 수정, 장바구니에서 할인된 가격 적용 불가 오류 수정 등 상품 상세 페이지 사진 오류 제외 모든 오류 수정" />
   </component>
 </project>
